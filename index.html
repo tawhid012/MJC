@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================
+       MJC - Mariam Juice Cafe | Hailakandi, Assam
+       © 2026 Mariam Juice Cafe
+       ============================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Mariam Juice Cafe (MJC) | Best Fresh Juices in Hailakandi, Assam</title>
+  <meta name="description" content="Mariam Juice Cafe (MJC) — Hailakandi's premium juice café. Freshly squeezed juices, smoothies, and healthy beverages crafted with love. Best in Town." />
+  <meta name="keywords" content="Mariam Juice Cafe, MJC, juice cafe Hailakandi, fresh juice Assam, smoothies Hailakandi, best cafe Hailakandi, healthy drinks Assam" />
+  <meta name="author" content="Mariam Juice Cafe" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mariam Juice Cafe (MJC) | Hailakandi, Assam" />
+  <meta property="og:description" content="Freshness in Every Sip. Premium juice café in Hailakandi, Assam." />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mariamjuicecafe.com/" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍹</text></svg>" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Mariam Juice Cafe Home">
+        <span class="logo-main">MJC</span>
+        <span class="logo-sub">Mariam Juice Cafe</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="order.html" class="nav-cta">Order Now</a></li>
+      </ul>
+
+      <!-- Hamburger Button (mobile) -->
+      <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" style="color:var(--gold)">Order Now →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-container">
+
+      <!-- Left: Text Content -->
+      <div class="hero-text">
+        <div class="hero-badge reveal">
+          <span class="dot"></span>
+          Now Open · Hailakandi, Assam
+        </div>
+
+        <h1 class="hero-title reveal delay-1">
+          Best in<br><span class="gold-word">Town.</span>
+        </h1>
+
+        <p class="hero-sub reveal delay-2">Freshness in Every Sip</p>
+
+        <p class="hero-desc reveal delay-3">
+          Experience Hailakandi's most premium juice café. We craft every drink
+          with hand-picked fresh fruits, zero preservatives, and a whole lot of love.
+        </p>
+
+        <div class="hero-actions reveal delay-4">
+          <a href="menu.html" class="btn-primary">
+            <span>Explore Menu</span>
+            <span>→</span>
+          </a>
+          <a href="#about" class="btn-ghost">Our Story</a>
+        </div>
+
+        <div class="hero-stats reveal delay-5">
+          <div class="stat-item">
+            <div class="stat-num"><span data-count="50" data-suffix="+">50+</span></div>
+            <div class="stat-label">Menu Items</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num"><span data-count="5000" data-suffix="+">5000+</span></div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num"><span data-count="100" data-suffix="%">100%</span></div>
+            <div class="stat-label">Fresh Ingredients</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Animated Glass Visual -->
+      <div class="hero-visual reveal-right">
+        <div class="glass-wrapper">
+          <!-- Dashed spinning ring -->
+          <div class="hero-ring"></div>
+
+          <!-- Floating fruit chips -->
+          <div class="fruit-chip">🍊</div>
+          <div class="fruit-chip">🍋</div>
+          <div class="fruit-chip">🍇</div>
+          <div class="fruit-chip">🥭</div>
+
+          <!-- Main juice glass SVG illustration -->
+          <svg class="juice-glass-svg" width="220" height="320" viewBox="0 0 220 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Glass body -->
+            <path d="M45 30 L175 30 L155 290 L65 290 Z" fill="white" stroke="#F5A623" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- Juice fill (golden) -->
+            <path d="M66 180 L154 180 L145 290 L75 290 Z" fill="#F5A623" opacity="0.85"/>
+            <!-- Juice layer (lighter) -->
+            <path d="M60 130 L160 130 L155 185 L65 185 Z" fill="#f8c05a" opacity="0.6"/>
+            <!-- Ice cubes -->
+            <rect x="78" y="140" width="22" height="20" rx="4" fill="white" opacity="0.7"/>
+            <rect x="106" y="148" width="18" height="18" rx="4" fill="white" opacity="0.6"/>
+            <rect x="130" y="138" width="20" height="22" rx="4" fill="white" opacity="0.65"/>
+            <!-- Straw -->
+            <rect x="126" y="15" width="8" height="200" rx="4" fill="#E63946" opacity="0.85"/>
+            <!-- Straw highlight -->
+            <rect x="128" y="15" width="2" height="200" rx="2" fill="white" opacity="0.4"/>
+            <!-- Rim highlight -->
+            <path d="M45 30 L175 30" stroke="white" stroke-width="1.5" opacity="0.5"/>
+            <!-- Glass shine -->
+            <path d="M60 50 L75 260" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.12"/>
+            <!-- Orange slice garnish -->
+            <circle cx="148" cy="38" r="20" fill="#F5A623" opacity="0.9"/>
+            <circle cx="148" cy="38" r="12" fill="#f8c05a" opacity="0.8"/>
+            <line x1="148" y1="18" x2="148" y2="58" stroke="white" stroke-width="1.2" opacity="0.6"/>
+            <line x1="128" y1="38" x2="168" y2="38" stroke="white" stroke-width="1.2" opacity="0.6"/>
+            <line x1="134" y1="24" x2="162" y2="52" stroke="white" stroke-width="1.2" opacity="0.6"/>
+            <line x1="162" y1="24" x2="134" y2="52" stroke="white" stroke-width="1.2" opacity="0.6"/>
+            <!-- Rim detail -->
+            <path d="M45 30 Q45 18 55 18 L165 18 Q175 18 175 30" fill="#f0f0f0" stroke="#F5A623" stroke-width="2"/>
+          </svg>
+
+          <!-- Best Seller badge -->
+          <div class="glass-badge">✦ Best Seller</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MENU SECTION
+  ============================================================ -->
+  <section id="menu">
+    <div class="menu-container">
+
+      <!-- Header -->
+      <div class="menu-header">
+        <div>
+          <span class="section-label reveal">Our Menu</span>
+          <h2 class="section-title section-title-white reveal delay-1">
+            Crafted for <span class="gold-text">Every Taste</span>
+          </h2>
+          <p class="section-desc section-desc-white reveal delay-2">
+            Every drink is made fresh to order. No preservatives, no compromises.
+          </p>
+        </div>
+        <!-- Category Tabs -->
+        <div class="menu-tabs reveal delay-3">
+          <button class="menu-tab active" data-cat="all">All</button>
+          <button class="menu-tab" data-cat="juice">Juices</button>
+          <button class="menu-tab" data-cat="smoothie">Smoothies</button>
+          <button class="menu-tab" data-cat="shake">Shakes</button>
+          <button class="menu-tab" data-cat="special">Specials</button>
+        </div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="menu-grid">
+
+        <!-- Card 1 -->
+        <div class="menu-card reveal delay-1" data-cat="juice">
+          <div class="menu-card-img">
+            <div class="menu-card-img-inner">🍊</div>
+            <span class="menu-card-tag popular">Popular</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Fresh Orange Juice</h3>
+            <p class="menu-card-desc">Freshly squeezed Valencia oranges, pulpy and bursting with Vitamin C goodness.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price">₹60 <span>/ glass</span></div>
+              <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="menu-card reveal delay-2" data-cat="juice">
+          <div class="menu-card-img">
+            <div class="menu-card-img-inner">🍍</div>
+            <span class="menu-card-tag">New</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Pineapple Delight</h3>
+            <p class="menu-card-desc">Tropical pineapple juice blended with a hint of black salt and mint leaves.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price">₹70 <span>/ glass</span></div>
+ <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
+                  </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="menu-card reveal delay-3" data-cat="smoothie">
+          <div class="menu-card-img">
+            <div class="menu-card-img-inner">🥭</div>
+            <span class="menu-card-tag popular">Popular</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Mango Bliss Smoothie</h3>
+            <p class="menu-card-desc">Alphonso mango purée blended with creamy yoghurt and a pinch of cardamom.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price">₹90 <span>/ glass</span></div>
+ <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
+                  </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="menu-card reveal delay-4" data-cat="shake">
+          <div class="menu-card-img">
+            <div class="menu-card-img-inner">🍫</div>
+            <span class="menu-card-tag">Bestseller</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Dark Choco Shake</h3>
+            <p class="menu-card-desc">Rich Belgian dark chocolate, cold milk, and whipped cream. Pure indulgence.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price">₹110 <span>/ glass</span></div>
+ <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
+                  </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="menu-card reveal delay-1" data-cat="special">
+          <div class="menu-card-img">
+            <div class="menu-card-img-inner">🌿</div>
+            <span class="menu-card-tag popular">Special</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">MJC Signature Detox</h3>
+            <p class="menu-card-desc">Cucumber, lemon, ginger, mint & coconut water. Our signature wellness blend.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price">₹100 <span>/ glass</span></div>
+ <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
+                  </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="menu-card reveal delay-2" data-cat="juice">
+          <div class="menu-card-img">
+            <div class="menu-card-img-inner">🍉</div>
+            <span class="menu-card-tag">Summer</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Watermelon Cooler</h3>
+            <p class="menu-card-desc">Chilled watermelon juice with lemon zest and Himalayan pink salt. Refreshing!</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price">₹65 <span>/ glass</span></div>
+ <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
+                  </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="menu-card reveal delay-3" data-cat="smoothie">
+          <div class="menu-card-img">
+            <div class="menu-card-img-inner">🍓</div>
+            <span class="menu-card-tag popular">Loved</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Berry Blush Smoothie</h3>
+            <p class="menu-card-desc">Strawberry, blueberry and raspberry blended with oat milk and honey.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price">₹95 <span>/ glass</span></div>
+ <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
+                  </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="menu-card reveal delay-4" data-cat="special">
+          <div class="menu-card-img">
+            <div class="menu-card-img-inner">🥤</div>
+            <span class="menu-card-tag" style="background:var(--red);color:#fff;">Limited</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Golden Turmeric Latte</h3>
+            <p class="menu-card-desc">Warm turmeric, ginger, oat milk and black pepper. An ancient wellness ritual.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price">₹85 <span>/ cup</span></div>
+ <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
+                  </div>
+          </div>
+        </div>
+
+      </div><!-- /menu-grid -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about">
+    <div class="about-container">
+
+      <!-- Visual Side -->
+      <div class="about-visual reveal-left">
+        <div class="about-deco"></div>
+        <div class="about-img-main">
+          <div class="about-img-inner">
+            <!-- Decorative cafe interior feel using SVG -->
+            <svg width="220" height="260" viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="180" width="180" height="60" rx="8" fill="#e8e8e8"/>
+              <rect x="50" y="140" width="120" height="45" rx="6" fill="#d0d0d0"/>
+              <!-- Juice bottles on counter -->
+              <rect x="65" y="100" width="18" height="45" rx="9" fill="#F5A623" opacity="0.8"/>
+              <rect x="95" y="90" width="18" height="55" rx="9" fill="#f8c05a" opacity="0.7"/>
+              <rect x="125" y="105" width="18" height="40" rx="9" fill="#F5A623" opacity="0.9"/>
+              <!-- Glasses -->
+              <rect x="70" y="155" width="10" height="20" rx="2" fill="white" opacity="0.8"/>
+              <rect x="100" y="155" width="10" height="20" rx="2" fill="white" opacity="0.8"/>
+              <rect x="130" y="155" width="10" height="20" rx="2" fill="white" opacity="0.8"/>
+              <!-- Overhead lamp -->
+              <ellipse cx="110" cy="40" rx="40" ry="15" fill="#F5A623" opacity="0.6"/>
+              <line x1="110" y1="10" x2="110" y2="40" stroke="#999" stroke-width="2"/>
+              <!-- Light glow -->
+              <ellipse cx="110" cy="55" rx="55" ry="20" fill="#F5A623" opacity="0.08"/>
+              <!-- MJC text on wall -->
+              <text x="88" y="75" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#F5A623" opacity="0.5">MJC</text>
+            </svg>
+          </div>
+        </div>
+        <!-- Floating experience card -->
+        <div class="about-float-card">
+          <div class="year">2021</div>
+          <p>Serving Hailakandi with freshness since day one</p>
+        </div>
+      </div>
+
+      <!-- Text Side -->
+      <div class="about-text reveal-right">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title section-title-black">
+          More Than Just<br>a <span class="gold-text">Juice Café</span>
+        </h2>
+        <p class="section-desc" style="margin-bottom:1rem;">
+          Mariam Juice Cafe was born from a simple belief: that everyone deserves a
+          sip of something truly fresh. Founded in Hailakandi, Assam, MJC is the town's
+          go-to destination for premium, handcrafted beverages.
+        </p>
+        <p class="section-desc">
+          We source the freshest seasonal fruits daily, refuse to use artificial
+          flavours, and pour every glass with pride. What started as a neighbourhood
+          café has grown into Hailakandi's most beloved juice destination.
+        </p>
+
+        <ul class="about-points">
+          <li class="about-point reveal delay-1">
+            <div class="about-point-icon">🍃</div>
+            <div class="about-point-text">
+              <h4>100% Fresh, Zero Preservatives</h4>
+              <p>Every drink is prepared fresh to order using locally sourced, seasonal produce.</p>
+            </div>
+          </li>
+          <li class="about-point reveal delay-2">
+            <div class="about-point-icon">✨</div>
+            <div class="about-point-text">
+              <h4>Premium Quality Standards</h4>
+              <p>Our hygiene and quality processes match the standard of upscale cafés anywhere.</p>
+            </div>
+          </li>
+          <li class="about-point reveal delay-3">
+            <div class="about-point-icon">💛</div>
+            <div class="about-point-text">
+              <h4>Made with Love for Hailakandi</h4>
+              <p>We're proud to be a local brand serving our community with heart and passion.</p>
+            </div>
+          </li>
+          <li class="about-point reveal delay-4">
+            <div class="about-point-icon">🏆</div>
+            <div class="about-point-text">
+              <h4>Best in Town — by Choice</h4>
+              <p>Recognised by thousands of happy customers as Hailakandi's #1 juice destination.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       GALLERY SECTION
+  ============================================================ -->
+  <section id="gallery">
+    <div class="gallery-container">
+
+      <div class="gallery-header">
+        <span class="section-label reveal">Gallery</span>
+        <h2 class="section-title section-title-white reveal delay-1">
+          A Glimpse of <span class="gold-text">MJC Life</span>
+        </h2>
+        <p class="section-desc section-desc-white reveal delay-2" style="margin:0 auto;text-align:center;">
+          Every frame tells the story of freshness, flavour, and the joy we pour into every glass.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item tall reveal delay-1">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#2a2a2a)">🍊</div>
+          <div class="gallery-overlay"><span class="gallery-caption">Fresh Orange Press</span></div>
+        </div>
+        <div class="gallery-item reveal delay-2">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1e1e1e,#111)">🥭</div>
+          <div class="gallery-overlay"><span class="gallery-caption">Mango Bliss</span></div>
+        </div>
+        <div class="gallery-item wide reveal delay-3">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#222,#181818);font-size:5rem">☕&nbsp;🍹</div>
+          <div class="gallery-overlay"><span class="gallery-caption">MJC Counter Vibes</span></div>
+        </div>
+        <div class="gallery-item reveal delay-2">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#222)">🍓</div>
+          <div class="gallery-overlay"><span class="gallery-caption">Berry Blush</span></div>
+        </div>
+        <div class="gallery-item reveal delay-3">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#202020,#151515)">🍍</div>
+          <div class="gallery-overlay"><span class="gallery-caption">Tropical Pineapple</span></div>
+        </div>
+        <div class="gallery-item reveal delay-4">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1c1c1c,#262626)">🌿</div>
+          <div class="gallery-overlay"><span class="gallery-caption">Detox Blend</span></div>
+        </div>
+        <div class="gallery-item reveal delay-5">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#202020)">🍇</div>
+          <div class="gallery-overlay"><span class="gallery-caption">Grape Power</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section id="contact">
+    <div class="contact-container">
+
+      <!-- Left: Info -->
+      <div class="contact-info reveal-left">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title section-title-black">
+          Visit Us or<br><span class="gold-text">Say Hello</span>
+        </h2>
+        <p class="section-desc">
+          We'd love to hear from you. Drop by our café or send us a message —
+          we respond quickly to all inquiries.
+        </p>
+
+        <div class="contact-info-block">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <h4>Our Location</h4>
+              <p>Mariam Juice Cafe (MJC)<br>Hailakandi, Assam — 788151</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div class="contact-info-text">
+              <h4>Opening Hours</h4>
+              <p>Monday – Saturday: 9 AM – 9 PM<br>Sunday: 10 AM – 8 PM</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📱</div>
+            <div class="contact-info-text">
+              <h4>Call or WhatsApp</h4>
+              <p>+91 XXXXX XXXXX</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📸</div>
+            <div class="contact-info-text">
+              <h4>Follow on Instagram</h4>
+              <p>@mariamjuicecafe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="reveal-right">
+        <div class="contact-form-wrap">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--black);margin-bottom:0.4rem;">
+            Send a Message
+          </h3>
+          <p style="font-size:0.82rem;color:#888;margin-bottom:2rem;">
+            Questions, feedback, or bulk orders? We're here.
+          </p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Full Name *</label>
+                <input type="text" id="f-name" name="name" placeholder="Your name" data-err="name-error" autocomplete="name" />
+                <span class="form-error-msg" id="name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email Address *</label>
+                <input type="email" id="f-email" name="email" placeholder="you@example.com" data-err="email-error" autocomplete="email" />
+                <span class="form-error-msg" id="email-error"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-phone">Phone (Optional)</label>
+                <input type="tel" id="f-phone" name="phone" placeholder="+91 XXXXX XXXXX" data-err="phone-error" autocomplete="tel" />
+                <span class="form-error-msg" id="phone-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="f-subject">Subject</label>
+                <select id="f-subject" name="subject">
+                  <option value="">Select a topic</option>
+                  <option value="order">Bulk / Event Order</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="query">General Query</option>
+                  <option value="collab">Collaboration</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-message">Your Message *</label>
+              <textarea id="f-message" name="message" placeholder="Tell us how we can help you..." data-err="msg-error"></textarea>
+              <span class="form-error-msg" id="msg-error"></span>
+            </div>
+
+            <button type="submit" class="btn-primary form-submit">
+              <span>Send Message</span>
+              <span>✦</span>
+            </button>
+
+            <div class="form-success" id="form-success">
+              ✓ Message sent! We'll get back to you shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="logo-main">MJC</div>
+          <div class="logo-sub">Mariam Juice Cafe</div>
+          <p>
+            Hailakandi's most premium juice café. We believe in freshness,
+            quality, and the art of a perfectly crafted beverage.
+          </p>
+          <!-- Social Icons -->
+          <div class="footer-social">
+            <a href="#" class="social-icon" aria-label="Instagram" title="Follow us on Instagram">
+              <!-- Instagram SVG icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="WhatsApp" title="Chat on WhatsApp">
+              <!-- WhatsApp SVG icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook" title="Find us on Facebook">
+              <!-- Facebook SVG icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Menu Highlights -->
+        <div class="footer-col">
+          <h5>Popular</h5>
+          <ul>
+            <li><a href="menu.html">Fresh Orange Juice</a></li>
+            <li><a href="menu.html">Mango Bliss Smoothie</a></li>
+            <li><a href="menu.html">MJC Signature Detox</a></li>
+            <li><a href="menu.html">Berry Blush</a></li>
+            <li><a href="menu.html">Dark Choco Shake</a></li>
+          </ul>
+        </div>
+
+        <!-- Visit Info -->
+        <div class="footer-col">
+          <h5>Visit Us</h5>
+          <ul>
+            <li><a href="#">Hailakandi, Assam</a></li>
+            <li><a href="#">Open Daily</a></li>
+            <li><a href="#">9 AM – 9 PM</a></li>
+            <li><a href="#">@mariamjuicecafe</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2026 <span class="highlight">Mariam Juice Cafe</span> | Hailakandi, Assam. All Rights Reserved.</p>
+        <p class="footer-tagline">✦ FRESHNESS IN EVERY SIP ✦</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
