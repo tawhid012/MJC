@@ -108,7 +108,7 @@
             <span>Explore Menu</span>
             <span>→</span>
           </a>
-          <a href="#about" class="btn-ghost">Our Story</a>
+          <a href="order.html" class="btn-ghost">Order Now</a>
         </div>
 
         <div class="hero-stats reveal delay-5">
@@ -179,13 +179,10 @@
   </section>
 
 
-  <!-- ============================================================
-       MENU SECTION
-  ============================================================ -->
+  <!-- MENU SECTION - Commented out. Items visible only on order.html and order.html -->
+  
   <section id="menu">
     <div class="menu-container">
-
-      <!-- Header -->
       <div class="menu-header">
         <div>
           <span class="section-label reveal">Our Menu</span>
@@ -196,150 +193,23 @@
             Every drink is made fresh to order. No preservatives, no compromises.
           </p>
         </div>
-        <!-- Category Tabs -->
         <div class="menu-tabs reveal delay-3">
           <button class="menu-tab active" data-cat="all">All</button>
-          <button class="menu-tab" data-cat="juice">Juices</button>
-          <button class="menu-tab" data-cat="smoothie">Smoothies</button>
-          <button class="menu-tab" data-cat="shake">Shakes</button>
-          <button class="menu-tab" data-cat="special">Specials</button>
+          <button class="menu-tab" data-cat="Fresh Juice">Juices</button>
+          <button class="menu-tab" data-cat="Smoothie">Smoothies</button>
+          <button class="menu-tab" data-cat="Shake">Shakes</button>
+          <button class="menu-tab" data-cat="Special">Specials</button>
         </div>
       </div>
-
-      <!-- Cards Grid -->
-      <div class="menu-grid">
-
-        <!-- Card 1 -->
-        <div class="menu-card reveal delay-1" data-cat="juice">
-          <div class="menu-card-img">
-            <div class="menu-card-img-inner">🍊</div>
-            <span class="menu-card-tag popular">Popular</span>
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Fresh Orange Juice</h3>
-            <p class="menu-card-desc">Freshly squeezed Valencia oranges, pulpy and bursting with Vitamin C goodness.</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">₹60 <span>/ glass</span></div>
-              <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
-            </div>
-          </div>
+      <div class="menu-grid" id="menu-grid">
+        <div class="loading-menu">
+          <p>Loading menu...</p>
         </div>
-
-        <!-- Card 2 -->
-        <div class="menu-card reveal delay-2" data-cat="juice">
-          <div class="menu-card-img">
-            <div class="menu-card-img-inner">🍍</div>
-            <span class="menu-card-tag">New</span>
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Pineapple Delight</h3>
-            <p class="menu-card-desc">Tropical pineapple juice blended with a hint of black salt and mint leaves.</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">₹70 <span>/ glass</span></div>
- <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
-                  </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="menu-card reveal delay-3" data-cat="smoothie">
-          <div class="menu-card-img">
-            <div class="menu-card-img-inner">🥭</div>
-            <span class="menu-card-tag popular">Popular</span>
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Mango Bliss Smoothie</h3>
-            <p class="menu-card-desc">Alphonso mango purée blended with creamy yoghurt and a pinch of cardamom.</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">₹90 <span>/ glass</span></div>
- <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
-                  </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="menu-card reveal delay-4" data-cat="shake">
-          <div class="menu-card-img">
-            <div class="menu-card-img-inner">🍫</div>
-            <span class="menu-card-tag">Bestseller</span>
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Dark Choco Shake</h3>
-            <p class="menu-card-desc">Rich Belgian dark chocolate, cold milk, and whipped cream. Pure indulgence.</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">₹110 <span>/ glass</span></div>
- <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
-                  </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="menu-card reveal delay-1" data-cat="special">
-          <div class="menu-card-img">
-            <div class="menu-card-img-inner">🌿</div>
-            <span class="menu-card-tag popular">Special</span>
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">MJC Signature Detox</h3>
-            <p class="menu-card-desc">Cucumber, lemon, ginger, mint & coconut water. Our signature wellness blend.</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">₹100 <span>/ glass</span></div>
- <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
-                  </div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="menu-card reveal delay-2" data-cat="juice">
-          <div class="menu-card-img">
-            <div class="menu-card-img-inner">🍉</div>
-            <span class="menu-card-tag">Summer</span>
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Watermelon Cooler</h3>
-            <p class="menu-card-desc">Chilled watermelon juice with lemon zest and Himalayan pink salt. Refreshing!</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">₹65 <span>/ glass</span></div>
- <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
-                  </div>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="menu-card reveal delay-3" data-cat="smoothie">
-          <div class="menu-card-img">
-            <div class="menu-card-img-inner">🍓</div>
-            <span class="menu-card-tag popular">Loved</span>
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Berry Blush Smoothie</h3>
-            <p class="menu-card-desc">Strawberry, blueberry and raspberry blended with oat milk and honey.</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">₹95 <span>/ glass</span></div>
- <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
-                  </div>
-          </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="menu-card reveal delay-4" data-cat="special">
-          <div class="menu-card-img">
-            <div class="menu-card-img-inner">🥤</div>
-            <span class="menu-card-tag" style="background:var(--red);color:#fff;">Limited</span>
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Golden Turmeric Latte</h3>
-            <p class="menu-card-desc">Warm turmeric, ginger, oat milk and black pepper. An ancient wellness ritual.</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">₹85 <span>/ cup</span></div>
- <button class="menu-add-btn" aria-label="Add to order"><a href="menu.html" target="_blank" rel="noopener noreferrer">+</a></button>
-                  </div>
-          </div>
-        </div>
-
-      </div><!-- /menu-grid -->
+      </div>
     </div>
   </section>
+  
+
 
 
   <!-- ============================================================
@@ -386,7 +256,7 @@
       <div class="about-text reveal-right">
         <span class="section-label">Our Story</span>
         <h2 class="section-title section-title-black">
-          More Than Just<br>a <span class="gold-text">Juice Café</span>
+          More Than Just<br>a <span class="gold-text">Café</span>
         </h2>
         <p class="section-desc" style="margin-bottom:1rem;">
           Mariam Juice Cafe was born from a simple belief: that everyone deserves a
@@ -425,7 +295,7 @@
             <div class="about-point-icon">🏆</div>
             <div class="about-point-text">
               <h4>Best in Town — by Choice</h4>
-              <p>Recognised by thousands of happy customers as Hailakandi's #1 juice destination.</p>
+              <p>Recognised by thousands of happy customers as Hailakandi's #1 cafe destination.</p>
             </div>
           </li>
         </ul>
@@ -453,33 +323,33 @@
 
       <div class="gallery-grid">
         <div class="gallery-item tall reveal delay-1">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#2a2a2a)">🍊</div>
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#2a2a2a)"><img src="freshorangepress.png" alt="an image of fress orange press"></div>
           <div class="gallery-overlay"><span class="gallery-caption">Fresh Orange Press</span></div>
         </div>
         <div class="gallery-item reveal delay-2">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1e1e1e,#111)">🥭</div>
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1e1e1e,#111)"><img src="mangobliss.png" alt="an image of fress mango bliss"></div>
           <div class="gallery-overlay"><span class="gallery-caption">Mango Bliss</span></div>
         </div>
         <div class="gallery-item wide reveal delay-3">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#222,#181818);font-size:5rem">☕&nbsp;🍹</div>
+          <div class="gallery-img" style="background:linear-gradient(135deg,#222,#181818);font-size:5rem"><img src="counter.png" alt="an image of counter"></div>
           <div class="gallery-overlay"><span class="gallery-caption">MJC Counter Vibes</span></div>
         </div>
         <div class="gallery-item reveal delay-2">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#222)">🍓</div>
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#222)"><img src="drink_1.png" alt="an image of drink1"></div>
           <div class="gallery-overlay"><span class="gallery-caption">Berry Blush</span></div>
         </div>
         <div class="gallery-item reveal delay-3">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#202020,#151515)">🍍</div>
+          <div class="gallery-img" style="background:linear-gradient(135deg,#202020,#151515)"><img src="drink_2.png" alt="an image of drink2"></div>
           <div class="gallery-overlay"><span class="gallery-caption">Tropical Pineapple</span></div>
         </div>
         <div class="gallery-item reveal delay-4">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1c1c1c,#262626)">🌿</div>
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1c1c1c,#262626)"><img src="drink_3.png" alt="an image of drink3"></div>
           <div class="gallery-overlay"><span class="gallery-caption">Detox Blend</span></div>
         </div>
-        <div class="gallery-item reveal delay-5">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#202020)">🍇</div>
+       <!-- <div class="gallery-item reveal delay-5">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#202020)"><img src="drink_4.png" alt="an image of drink4"></div>
           <div class="gallery-overlay"><span class="gallery-caption">Grape Power</span></div>
-        </div>
+        </div> -->
       </div>
 
     </div>
@@ -522,7 +392,7 @@
             <div class="contact-info-icon">📱</div>
             <div class="contact-info-text">
               <h4>Call or WhatsApp</h4>
-              <p>+91 XXXXX XXXXX</p>
+              <p><a href="https://wa.me/919136728687" target="_blank" style="color: inherit; text-decoration: none;">+91 91367 28687</a></p>
             </div>
           </div>
           <div class="contact-info-item">
@@ -624,7 +494,7 @@
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
               </svg>
             </a>
-            <a href="#" class="social-icon" aria-label="WhatsApp" title="Chat on WhatsApp">
+            <a href="https://wa.me/919136728687" target="_blank" class="social-icon" aria-label="WhatsApp" title="Chat on WhatsApp">
               <!-- WhatsApp SVG icon -->
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
@@ -644,7 +514,7 @@
           <h5>Quick Links</h5>
           <ul>
             <li><a href="#hero">Home</a></li>
-            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="order.html">Our Menu</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -655,11 +525,11 @@
         <div class="footer-col">
           <h5>Popular</h5>
           <ul>
-            <li><a href="menu.html">Fresh Orange Juice</a></li>
-            <li><a href="menu.html">Mango Bliss Smoothie</a></li>
-            <li><a href="menu.html">MJC Signature Detox</a></li>
-            <li><a href="menu.html">Berry Blush</a></li>
-            <li><a href="menu.html">Dark Choco Shake</a></li>
+            <li><a href="order.html">Fresh Orange Juice</a></li>
+            <li><a href="order.html">Mango Bliss Smoothie</a></li>
+            <li><a href="order.html">MJC Signature Detox</a></li>
+            <li><a href="order.html">Berry Blush</a></li>
+            <li><a href="order.html">Dark Choco Shake</a></li>
           </ul>
         </div>
 
@@ -670,7 +540,7 @@
             <li><a href="#">Hailakandi, Assam</a></li>
             <li><a href="#">Open Daily</a></li>
             <li><a href="#">9 AM – 9 PM</a></li>
-            <li><a href="#">@mariamjuicecafe</a></li>
+            <li><a href="#">@mariam_juice_cafe</a></li>
           </ul>
         </div>
       </div>
@@ -687,6 +557,83 @@
 
   <!-- Main JavaScript -->
   <script src="js/main.js"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  
+  <script>
+    // Load menu items from Supabase on page load
+    document.addEventListener('DOMContentLoaded', async () => {
+      console.log('🏠 Index page - Loading menu from Supabase...');
+      
+      const menuGrid = document.getElementById('menu-grid');
+      
+      try {
+        const menuItems = await MenuItems.getAll();
+        console.log('📋 Menu items loaded:', menuItems.length);
+        
+        if (menuItems.length === 0) {
+          menuGrid.innerHTML = `
+            <div class="empty-menu" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #888;">
+              <p>No menu items available. Please add items from the admin panel.</p>
+              <a href="admin.html" style="color: #F5A623; text-decoration: underline;">Go to Admin Panel</a>
+            </div>
+          `;
+          return;
+        }
+        
+        // Render menu cards
+        menuGrid.innerHTML = menuItems.map((item, index) => `
+          <div class="menu-card reveal delay-${(index % 4) + 1}" data-cat="${item.category}">
+            <div class="menu-card-img">
+              <div class="menu-card-img-inner">${item.emoji || '🍹'}</div>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">${item.name}</h3>
+              <p class="menu-card-desc">${item.description || 'Delicious fresh drink'}</p>
+              <div class="menu-card-footer">
+                <div class="menu-card-price">₹${item.price} <span>/ glass</span></div>
+                <button class="menu-add-btn" aria-label="Add to order"><a href="order.html" target="_blank" rel="noopener noreferrer">+</a></button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+        
+        // Re-initialize tab functionality
+        initMenuTabs();
+        
+      } catch (err) {
+        console.error('❌ Error loading menu:', err);
+        menuGrid.innerHTML = `
+          <div class="error-menu" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #E63946;">
+            <p>Error loading menu. Please try again later.</p>
+          </div>
+        `;
+      }
+    });
+    
+    // Menu tab functionality
+    function initMenuTabs() {
+      const tabs = document.querySelectorAll('.menu-tab');
+      const cards = document.querySelectorAll('.menu-card');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          
+          const cat = tab.dataset.cat;
+          cards.forEach(card => {
+            const show = cat === 'all' || card.dataset.cat === cat;
+            card.style.display = show ? 'block' : 'none';
+          });
+        });
+      });
+    }
+  </script>
+  
+
 
 </body>
 </html>

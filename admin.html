@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Mariam Juice Cafe (MJC)</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F5A623'/><text y='.9em' font-size='65' x='50%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700'>M</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --gold: #F5A623;
+      --black: #000;
+      --white: #fff;
+      --gray: #666;
+      --light-gray: #f5f5f5;
+      --red: #E63946;
+      --green: #22c55e;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      min-height: 100vh;
+    }
+    .admin-header {
+      background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(245,166,35,0.2);
+    }
+    .admin-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .admin-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 400px 1fr;
+      gap: 2rem;
+    }
+    @media(max-width: 1024px) {
+      .admin-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .admin-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .admin-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(245,166,35,0.1);
+    }
+    .form-select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .form-select:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: #000;
+      width: 100%;
+    }
+    .btn-primary:hover {
+      background: #e6991f;
+      transform: translateY(-2px);
+    }
+    .btn-edit {
+      background: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+    .btn-edit:hover {
+      background: rgba(59, 130, 246, 0.3);
+    }
+    .btn-delete {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+    .btn-delete:hover {
+      background: rgba(239, 68, 68, 0.3);
+    }
+    .btn-cancel {
+      background: #333;
+      color: #fff;
+      flex: 1;
+    }
+    .btn-cancel:hover {
+      background: #444;
+    }
+    .btn-save {
+      background: var(--green);
+      color: #fff;
+      flex: 1;
+    }
+    .btn-save:hover {
+      background: #16a34a;
+    }
+    .items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+    .items-list::-webkit-scrollbar {
+      width: 6px;
+    }
+    .items-list::-webkit-scrollbar-track {
+      background: #1a1a1a;
+      border-radius: 3px;
+    }
+    .items-list::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 3px;
+    }
+    .item-card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.3s;
+    }
+    .item-card:hover {
+      border-color: var(--gold);
+      background: #1f1f1f;
+    }
+    .item-emoji {
+      font-size: 2rem;
+      min-width: 50px;
+      text-align: center;
+    }
+    .item-info {
+      flex: 1;
+    }
+    .item-name {
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+    .item-details {
+      font-size: 0.8rem;
+      color: #888;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .item-price {
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .item-category {
+      background: rgba(245,166,35,0.1);
+      color: var(--gold);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .item-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: #666;
+    }
+    .empty-state i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    .loading {
+      text-align: center;
+      padding: 3rem;
+      color: var(--gold);
+    }
+    .loading i {
+      font-size: 2rem;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      z-index: 1000;
+      transform: translateX(150%);
+      transition: all 0.3s;
+    }
+    .toast.show {
+      transform: translateX(0);
+    }
+    .toast-success {
+      background: var(--green);
+      color: #fff;
+    }
+    .toast-error {
+      background: var(--red);
+      color: #fff;
+    }
+    .back-link {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .back-link:hover {
+      color: var(--gold);
+    }
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 90%;
+      max-width: 500px;
+      transform: scale(0.9);
+      transition: all 0.3s;
+    }
+    .modal-overlay.active .modal {
+      transform: scale(1);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .modal-close:hover {
+      color: #fff;
+    }
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+    .form-row .form-group {
+      flex: 1;
+    }
+    @media(max-width: 640px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+    .category-tag {
+      display: inline-block;
+      background: rgba(245,166,35,0.1);
+      color: var(--gold);
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    /* Login Screen */
+    .login-overlay {
+      position: fixed;
+      inset: 0;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    .login-overlay.hidden {
+      display: none;
+    }
+    .login-container {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 20px;
+      padding: 3rem;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .login-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .login-subtitle {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .login-form {
+      text-align: left;
+    }
+    .login-error {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+    .login-error.show {
+      display: block;
+    }
+    .btn-login {
+      background: var(--gold);
+      color: #000;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .btn-login:hover {
+      background: #e6991f;
+    }
+    .admin-content {
+      display: none;
+    }
+    .admin-content.authenticated {
+      display: block;
+    }
+    .logout-btn {
+      background: transparent;
+      border: 1px solid #333;
+      color: #888;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .logout-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-container">
+      <div class="login-logo">
+        <i class="fas fa-crown"></i> MJC Admin
+      </div>
+      <p class="login-subtitle">Please login to access the admin panel</p>
+      
+      <form id="login-form" class="login-form">
+        <div id="login-error" class="login-error">
+          <i class="fas fa-exclamation-circle"></i> Invalid credentials. Please try again.
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">User ID</label>
+          <input type="text" id="login-userid" class="form-input" placeholder="Enter your user ID" required />
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" id="login-password" class="form-input" placeholder="Enter your password" required />
+        </div>
+        
+        <button type="submit" class="btn btn-login">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Header -->
+  <header class="admin-header">
+    <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <div class="admin-logo">
+        <i class="fas fa-crown"></i> MJC Admin Panel
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="index.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to Website
+        </a>
+        <button id="logout-btn" class="logout-btn" style="display: none;">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Admin Container -->
+  <div id="admin-content" class="admin-container">
+    
+    <div class="admin-grid">
+      
+      <!-- Add/Edit Form -->
+      <div class="admin-card">
+        <h2 class="admin-card-title">
+          <i class="fas fa-plus-circle"></i>
+          <span id="form-title">Add New Menu Item</span>
+        </h2>
+        
+        <form id="menu-item-form">
+          <input type="hidden" id="item-id" value="" />
+          
+          <div class="form-group">
+            <label class="form-label">Item Name *</label>
+            <input type="text" id="item-name" class="form-input" placeholder="e.g., Fresh Orange Juice" required />
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Price (₹) *</label>
+              <input type="number" id="item-price" class="form-input" placeholder="60" min="0" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Emoji *</label>
+              <input type="text" id="item-emoji" class="form-input" placeholder="🍊" maxlength="10" required />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Category *</label>
+            <select id="item-category" class="form-select" required>
+              <option value="">Select Category</option>
+              <option value="Fresh Juice">Fresh Juice</option>
+              <option value="Smoothie">Smoothie</option>
+              <option value="Cold Press">Cold Press</option>
+              <option value="Shake">Shake</option>
+              <option value="Special">Special</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Description</label>
+            <textarea id="item-description" class="form-input" rows="3" placeholder="Brief description of the item..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Image URL (Optional)</label>
+            <input type="text" id="item-image" class="form-input" placeholder="https://example.com/image.jpg" />
+          </div>
+          
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <button type="button" id="cancel-btn" class="btn btn-cancel" style="display: none;">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-save"></i>
+              <span id="submit-text">Add Item</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Items List -->
+      <div class="admin-card">
+        <h2 class="admin-card-title">
+          <i class="fas fa-list"></i>
+          Menu Items <span id="items-count" class="category-tag">0</span>
+        </h2>
+        
+        <div id="loading" class="loading">
+          <i class="fas fa-spinner"></i>
+          <p>Loading menu items...</p>
+        </div>
+        
+        <div id="empty-state" class="empty-state" style="display: none;">
+          <i class="fas fa-coffee"></i>
+          <p>No menu items yet.</p>
+          <p>Add your first item using the form!</p>
+        </div>
+        
+        <div id="items-list" class="items-list">
+          <!-- Items will be loaded here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal-overlay" id="delete-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Confirm Delete</h3>
+        <button class="modal-close" onclick="closeDeleteModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <p style="color: #888; margin-bottom: 1.5rem;">
+        Are you sure you want to delete <strong id="delete-item-name" style="color: #fff;"></strong>? This action cannot be undone.
+      </p>
+      <div style="display: flex; gap: 1rem;">
+        <button class="btn btn-cancel" onclick="closeDeleteModal()">Cancel</button>
+        <button class="btn btn-delete" id="confirm-delete-btn">
+          <i class="fas fa-trash"></i> Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- Supabase Config -->
+  <script src="js/supabase-config.js"></script>
+  
+  <!-- Admin Script -->
+  <script>
+    // ============================================
+    // Authentication System
+    // ============================================
+    
+    const VALID_USERID = 'mariamjuicecafe';
+    const VALID_PASSWORD = 'MJC@2026';
+    const AUTH_KEY = 'mjc_admin_authenticated';
+
+    // Check if user is authenticated
+    function isAuthenticated() {
+      return sessionStorage.getItem(AUTH_KEY) === 'true';
+    }
+
+    // Show login screen
+    function showLogin() {
+      document.getElementById('login-overlay').classList.remove('hidden');
+      document.getElementById('admin-content').classList.remove('authenticated');
+      document.getElementById('logout-btn').style.display = 'none';
+    }
+
+    // Show admin panel
+    function showAdmin() {
+      document.getElementById('login-overlay').classList.add('hidden');
+      document.getElementById('admin-content').classList.add('authenticated');
+      document.getElementById('logout-btn').style.display = 'block';
+    }
+
+    // Handle login
+    function handleLogin(e) {
+      e.preventDefault();
+      
+      const userid = document.getElementById('login-userid').value.trim();
+      const password = document.getElementById('login-password').value;
+      const errorEl = document.getElementById('login-error');
+      
+      console.log('🔐 Login attempt for user:', userid);
+      
+      if (userid === VALID_USERID && password === VALID_PASSWORD) {
+        // Successful login
+        console.log('✅ Login successful');
+        sessionStorage.setItem(AUTH_KEY, 'true');
+        showAdmin();
+        loadMenuItems();
+      } else {
+        // Failed login
+        console.log('❌ Login failed - invalid credentials');
+        errorEl.classList.add('show');
+        setTimeout(() => {
+          errorEl.classList.remove('show');
+        }, 3000);
+      }
+    }
+
+    // Handle logout
+    function handleLogout() {
+      console.log('👋 Logging out...');
+      sessionStorage.removeItem(AUTH_KEY);
+      showLogin();
+      // Reset form fields
+      document.getElementById('login-form').reset();
+    }
+
+    // Initialize authentication
+    function initAuth() {
+      if (isAuthenticated()) {
+        showAdmin();
+        loadMenuItems();
+      } else {
+        showLogin();
+      }
+      
+      // Login form submission
+      document.getElementById('login-form').addEventListener('submit', handleLogin);
+      
+      // Logout button
+      document.getElementById('logout-btn').addEventListener('click', handleLogout);
+    }
+
+    // ============================================
+    // Admin Panel JavaScript
+    // ============================================
+
+    let menuItems = [];
+    let editingId = null;
+    let deletingId = null;
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('🚀 Admin panel initializing...');
+      initAuth();
+      
+      // Form submission
+      document.getElementById('menu-item-form').addEventListener('submit', handleFormSubmit);
+      
+      // Cancel button
+      document.getElementById('cancel-btn').addEventListener('click', resetForm);
+    });
+
+    // Load menu items from Supabase
+    async function loadMenuItems() {
+      const loadingEl = document.getElementById('loading');
+      const emptyStateEl = document.getElementById('empty-state');
+      const itemsListEl = document.getElementById('items-list');
+      
+      try {
+        menuItems = await MenuItems.getAll();
+        console.log('📋 Loaded menu items:', menuItems.length);
+        
+        loadingEl.style.display = 'none';
+        
+        if (menuItems.length === 0) {
+          emptyStateEl.style.display = 'block';
+          itemsListEl.innerHTML = '';
+        } else {
+          emptyStateEl.style.display = 'none';
+          renderItems();
+        }
+        
+        document.getElementById('items-count').textContent = menuItems.length;
+      } catch (err) {
+        console.error('❌ Error loading menu items:', err);
+        loadingEl.innerHTML = '<p style="color: #ef4444;">Error loading menu items. Check console for details.</p>';
+        showToast('Error loading menu items', 'error');
+      }
+    }
+
+    // Render items list
+    function renderItems() {
+      const itemsListEl = document.getElementById('items-list');
+      
+      itemsListEl.innerHTML = menuItems.map(item => `
+        <div class="item-card">
+          <div class="item-emoji">${item.emoji || '🍹'}</div>
+          <div class="item-info">
+            <div class="item-name">${item.name}</div>
+            <div class="item-details">
+              <span class="item-price">₹${item.price}</span>
+              <span class="item-category">${item.category}</span>
+              ${item.description ? `<span style="color: #666;">${item.description.substring(0, 50)}${item.description.length > 50 ? '...' : ''}</span>` : ''}
+            </div>
+          </div>
+          <div class="item-actions">
+            <button class="btn btn-edit" onclick="editItem('${item.id}')">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+            <button class="btn btn-delete" onclick="confirmDelete('${item.id}')">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Handle form submit
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('item-name').value.trim();
+      const price = parseFloat(document.getElementById('item-price').value);
+      const emoji = document.getElementById('item-emoji').value.trim();
+      const category = document.getElementById('item-category').value;
+      const description = document.getElementById('item-description').value.trim();
+      const image = document.getElementById('item-image').value.trim();
+      
+      const itemData = {
+        name,
+        price,
+        emoji,
+        category,
+        description: description || null,
+        image: image || null
+      };
+      
+      console.log('📝 Form data:', itemData);
+      
+if (editingId) {
+        // Update existing item
+        console.log('✏️ Updating item:', editingId);
+        const result = await MenuItems.update(editingId, itemData);
+        
+        if (result.success) {
+          showToast('Menu item updated successfully!', 'success');
+          loadMenuItems();
+          resetForm();
+        } else {
+          console.error('Update error:', result.error);
+          showToast('Error updating menu item: ' + (result.error?.message || 'Unknown error'), 'error');
+        }
+      } else {
+        // Add new item
+        console.log('➕ Adding new item:', name);
+        const result = await MenuItems.add(itemData);
+        
+        if (result.success) {
+          showToast('Menu item added successfully!', 'success');
+          loadMenuItems();
+          resetForm();
+        } else {
+          console.error('Add error:', result.error);
+          showToast('Error adding menu item: ' + (result.error?.message || 'Unknown error'), 'error');
+        }
+      }
+    }
+
+    // Edit item
+    function editItem(id) {
+      const item = menuItems.find(i => i.id === id);
+      if (!item) return;
+      
+      console.log('✏️ Editing item:', item.name);
+      
+      editingId = id;
+      
+      // Fill form
+      document.getElementById('item-id').value = id;
+      document.getElementById('item-name').value = item.name;
+      document.getElementById('item-price').value = item.price;
+      document.getElementById('item-emoji').value = item.emoji;
+      document.getElementById('item-category').value = item.category;
+      document.getElementById('item-description').value = item.description || '';
+      document.getElementById('item-image').value = item.image || '';
+      
+      // Update UI
+      document.getElementById('form-title').textContent = 'Edit Menu Item';
+      document.getElementById('submit-text').textContent = 'Save Changes';
+      document.getElementById('cancel-btn').style.display = 'inline-flex';
+      
+      // Scroll to form
+      document.querySelector('.admin-card').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Confirm delete
+    function confirmDelete(id) {
+      const item = menuItems.find(i => i.id === id);
+      if (!item) return;
+      
+      console.log('🗑️ Confirming delete for:', item.name);
+      
+      deletingId = id;
+      document.getElementById('delete-item-name').textContent = item.name;
+      document.getElementById('delete-modal').classList.add('active');
+      
+      // Setup delete button
+      document.getElementById('confirm-delete-btn').onclick = () => deleteItem(id);
+    }
+
+    // Close delete modal
+    function closeDeleteModal() {
+      document.getElementById('delete-modal').classList.remove('active');
+      deletingId = null;
+    }
+
+    // Delete item
+    async function deleteItem(id) {
+      console.log('🗑️ Deleting item:', id);
+      
+      const result = await MenuItems.delete(id);
+      
+      if (result.success) {
+        showToast('Menu item deleted successfully!', 'success');
+        loadMenuItems();
+      } else {
+        showToast('Error deleting menu item', 'error');
+      }
+      
+      closeDeleteModal();
+    }
+
+    // Reset form
+    function resetForm() {
+      console.log('🔄 Resetting form');
+      
+      editingId = null;
+      document.getElementById('menu-item-form').reset();
+      document.getElementById('item-id').value = '';
+      document.getElementById('form-title').textContent = 'Add New Menu Item';
+      document.getElementById('submit-text').textContent = 'Add Item';
+      document.getElementById('cancel-btn').style.display = 'none';
+    }
+
+    // Show toast notification
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.className = `toast toast-${type} show`;
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Close modal on overlay click
+    document.getElementById('delete-modal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) {
+        closeDeleteModal();
+      }
+    });
+  </script>
+</body>
+</html>
+
