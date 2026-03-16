@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Panel | Mariam Juice Cafe (MJC)</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F5A623'/><text y='.9em' font-size='65' x='50%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700'>M</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F5A623'/><text y='.9em' font-size='65' x='50%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700'>M</text></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
@@ -17,44 +19,52 @@
       --red: #E63946;
       --green: #22c55e;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: #0a0a0a;
       color: #fff;
       min-height: 100vh;
     }
+
     .admin-header {
       background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
       padding: 1.5rem 2rem;
-      border-bottom: 1px solid rgba(245,166,35,0.2);
+      border-bottom: 1px solid rgba(245, 166, 35, 0.2);
     }
+
     .admin-logo {
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--gold);
     }
+
     .admin-container {
       max-width: 1400px;
       margin: 0 auto;
       padding: 2rem;
     }
+
     .admin-grid {
       display: grid;
       grid-template-columns: 400px 1fr;
       gap: 2rem;
     }
+
     @media(max-width: 1024px) {
       .admin-grid {
         grid-template-columns: 1fr;
       }
     }
+
     .admin-card {
       background: #111;
       border: 1px solid #222;
       border-radius: 16px;
       padding: 1.5rem;
     }
+
     .admin-card-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
@@ -65,9 +75,11 @@
       align-items: center;
       gap: 0.5rem;
     }
+
     .form-group {
       margin-bottom: 1rem;
     }
+
     .form-label {
       display: block;
       font-size: 0.75rem;
@@ -77,6 +89,7 @@
       letter-spacing: 0.1em;
       margin-bottom: 0.5rem;
     }
+
     .form-input {
       width: 100%;
       padding: 0.75rem 1rem;
@@ -87,11 +100,13 @@
       font-size: 0.9rem;
       transition: all 0.3s;
     }
+
     .form-input:focus {
       outline: none;
       border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(245,166,35,0.1);
+      box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.1);
     }
+
     .form-select {
       width: 100%;
       padding: 0.75rem 1rem;
@@ -102,10 +117,12 @@
       font-size: 0.9rem;
       cursor: pointer;
     }
+
     .form-select:focus {
       outline: none;
       border-color: var(--gold);
     }
+
     .btn {
       padding: 0.75rem 1.5rem;
       border-radius: 10px;
@@ -119,49 +136,60 @@
       justify-content: center;
       gap: 0.5rem;
     }
+
     .btn-primary {
       background: var(--gold);
       color: #000;
       width: 100%;
     }
+
     .btn-primary:hover {
       background: #e6991f;
       transform: translateY(-2px);
     }
+
     .btn-edit {
       background: rgba(59, 130, 246, 0.2);
       color: #3b82f6;
       padding: 0.5rem 1rem;
       font-size: 0.8rem;
     }
+
     .btn-edit:hover {
       background: rgba(59, 130, 246, 0.3);
     }
+
     .btn-delete {
       background: rgba(239, 68, 68, 0.2);
       color: #ef4444;
       padding: 0.5rem 1rem;
       font-size: 0.8rem;
     }
+
     .btn-delete:hover {
       background: rgba(239, 68, 68, 0.3);
     }
+
     .btn-cancel {
       background: #333;
       color: #fff;
       flex: 1;
     }
+
     .btn-cancel:hover {
       background: #444;
     }
+
     .btn-save {
       background: var(--green);
       color: #fff;
       flex: 1;
     }
+
     .btn-save:hover {
       background: #16a34a;
     }
+
     .items-list {
       display: flex;
       flex-direction: column;
@@ -169,17 +197,21 @@
       max-height: 600px;
       overflow-y: auto;
     }
+
     .items-list::-webkit-scrollbar {
       width: 6px;
     }
+
     .items-list::-webkit-scrollbar-track {
       background: #1a1a1a;
       border-radius: 3px;
     }
+
     .items-list::-webkit-scrollbar-thumb {
       background: var(--gold);
       border-radius: 3px;
     }
+
     .item-card {
       background: #1a1a1a;
       border: 1px solid #2a2a2a;
@@ -190,23 +222,28 @@
       gap: 1rem;
       transition: all 0.3s;
     }
+
     .item-card:hover {
       border-color: var(--gold);
       background: #1f1f1f;
     }
+
     .item-emoji {
       font-size: 2rem;
       min-width: 50px;
       text-align: center;
     }
+
     .item-info {
       flex: 1;
     }
+
     .item-name {
       font-weight: 600;
       color: #fff;
       margin-bottom: 0.25rem;
     }
+
     .item-details {
       font-size: 0.8rem;
       color: #888;
@@ -214,12 +251,14 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .item-price {
       color: var(--gold);
       font-weight: 700;
     }
+
     .item-category {
-      background: rgba(245,166,35,0.1);
+      background: rgba(245, 166, 35, 0.1);
       color: var(--gold);
       padding: 0.2rem 0.5rem;
       border-radius: 4px;
@@ -227,33 +266,45 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+
     .item-actions {
       display: flex;
       gap: 0.5rem;
     }
+
     .empty-state {
       text-align: center;
       padding: 3rem;
       color: #666;
     }
+
     .empty-state i {
       font-size: 3rem;
       margin-bottom: 1rem;
       color: #333;
     }
+
     .loading {
       text-align: center;
       padding: 3rem;
       color: var(--gold);
     }
+
     .loading i {
       font-size: 2rem;
       animation: spin 1s linear infinite;
     }
+
     @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
+
     .toast {
       position: fixed;
       bottom: 2rem;
@@ -266,17 +317,21 @@
       transform: translateX(150%);
       transition: all 0.3s;
     }
+
     .toast.show {
       transform: translateX(0);
     }
+
     .toast-success {
       background: var(--green);
       color: #fff;
     }
+
     .toast-error {
       background: var(--red);
       color: #fff;
     }
+
     .back-link {
       color: #888;
       text-decoration: none;
@@ -286,14 +341,16 @@
       gap: 0.5rem;
       margin-bottom: 1rem;
     }
+
     .back-link:hover {
       color: var(--gold);
     }
+
     /* Modal */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0, 0, 0, 0.8);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -302,10 +359,12 @@
       visibility: hidden;
       transition: all 0.3s;
     }
+
     .modal-overlay.active {
       opacity: 1;
       visibility: visible;
     }
+
     .modal {
       background: #111;
       border: 1px solid #222;
@@ -316,20 +375,24 @@
       transform: scale(0.9);
       transition: all 0.3s;
     }
+
     .modal-overlay.active .modal {
       transform: scale(1);
     }
+
     .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 1.5rem;
     }
+
     .modal-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       font-weight: 700;
     }
+
     .modal-close {
       background: none;
       border: none;
@@ -337,30 +400,36 @@
       font-size: 1.2rem;
       cursor: pointer;
     }
+
     .modal-close:hover {
       color: #fff;
     }
+
     .form-row {
       display: flex;
       gap: 1rem;
     }
+
     .form-row .form-group {
       flex: 1;
     }
+
     @media(max-width: 640px) {
       .form-row {
         flex-direction: column;
       }
     }
+
     .category-tag {
       display: inline-block;
-      background: rgba(245,166,35,0.1);
+      background: rgba(245, 166, 35, 0.1);
       color: var(--gold);
       padding: 0.3rem 0.8rem;
       border-radius: 50px;
       font-size: 0.75rem;
       font-weight: 600;
     }
+
     /* Login Screen */
     .login-overlay {
       position: fixed;
@@ -371,9 +440,11 @@
       justify-content: center;
       z-index: 2000;
     }
+
     .login-overlay.hidden {
       display: none;
     }
+
     .login-container {
       background: #111;
       border: 1px solid #222;
@@ -383,6 +454,7 @@
       max-width: 400px;
       text-align: center;
     }
+
     .login-logo {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
@@ -390,14 +462,17 @@
       color: var(--gold);
       margin-bottom: 0.5rem;
     }
+
     .login-subtitle {
       color: #666;
       font-size: 0.9rem;
       margin-bottom: 2rem;
     }
+
     .login-form {
       text-align: left;
     }
+
     .login-error {
       background: rgba(239, 68, 68, 0.2);
       color: #ef4444;
@@ -407,24 +482,30 @@
       margin-bottom: 1rem;
       display: none;
     }
+
     .login-error.show {
       display: block;
     }
+
     .btn-login {
       background: var(--gold);
       color: #000;
       width: 100%;
       margin-top: 1rem;
     }
+
     .btn-login:hover {
       background: #e6991f;
     }
+
     .admin-content {
       display: none;
     }
+
     .admin-content.authenticated {
       display: block;
     }
+
     .logout-btn {
       background: transparent;
       border: 1px solid #333;
@@ -435,12 +516,14 @@
       cursor: pointer;
       transition: all 0.3s;
     }
+
     .logout-btn:hover {
       border-color: var(--gold);
       color: var(--gold);
     }
   </style>
 </head>
+
 <body>
 
   <!-- Login Screen -->
@@ -450,22 +533,22 @@
         <i class="fas fa-crown"></i> MJC Admin
       </div>
       <p class="login-subtitle">Please login to access the admin panel</p>
-      
+
       <form id="login-form" class="login-form">
         <div id="login-error" class="login-error">
           <i class="fas fa-exclamation-circle"></i> Invalid credentials. Please try again.
         </div>
-        
+
         <div class="form-group">
           <label class="form-label">User ID</label>
           <input type="text" id="login-userid" class="form-input" placeholder="Enter your user ID" required />
         </div>
-        
+
         <div class="form-group">
           <label class="form-label">Password</label>
           <input type="password" id="login-password" class="form-input" placeholder="Enter your password" required />
         </div>
-        
+
         <button type="submit" class="btn btn-login">
           <i class="fas fa-sign-in-alt"></i> Login
         </button>
@@ -492,24 +575,24 @@
 
   <!-- Admin Container -->
   <div id="admin-content" class="admin-container">
-    
+
     <div class="admin-grid">
-      
+
       <!-- Add/Edit Form -->
       <div class="admin-card">
         <h2 class="admin-card-title">
           <i class="fas fa-plus-circle"></i>
           <span id="form-title">Add New Menu Item</span>
         </h2>
-        
+
         <form id="menu-item-form">
           <input type="hidden" id="item-id" value="" />
-          
+
           <div class="form-group">
             <label class="form-label">Item Name *</label>
             <input type="text" id="item-name" class="form-input" placeholder="e.g., Fresh Orange Juice" required />
           </div>
-          
+
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Price (₹) *</label>
@@ -520,29 +603,38 @@
               <input type="text" id="item-emoji" class="form-input" placeholder="🍊" maxlength="10" required />
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label">Category *</label>
             <select id="item-category" class="form-select" required>
               <option value="">Select Category</option>
-              <option value="Fresh Juice">Fresh Juice</option>
-              <option value="Smoothie">Smoothie</option>
-              <option value="Cold Press">Cold Press</option>
+              <option value="Pizza">Pizza</option>
+              <option value="Burger">Burger</option>
+              <option value="Sandwich">Sandwich</option>
+              <option value="Starter">Starter</option>
+              <option value="Fries">Fries</option>
+              <option value="Mocktail">Mocktail</option>
               <option value="Shake">Shake</option>
-              <option value="Special">Special</option>
+              <option value="Fresh Juice">Fresh Juice</option>
+              <option value="Special">Special Service</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label">Description</label>
-            <textarea id="item-description" class="form-input" rows="3" placeholder="Brief description of the item..."></textarea>
+            <textarea id="item-description" class="form-input" rows="3"
+              placeholder="Brief description of the item..."></textarea>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label">Image URL (Optional)</label>
-            <input type="text" id="item-image" class="form-input" placeholder="https://example.com/image.jpg" />
+            <input type="text" id="item-image" class="form-input" placeholder="https://images.unsplash.com/photo-..." oninput="updateImagePreview()" />
+            <div id="image-preview-container" style="margin-top: 0.75rem; display: none;">
+              <p class="form-label" style="font-size: 0.65rem; margin-bottom: 0.25rem;">Preview:</p>
+              <img id="image-preview" src="" alt="Preview" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid #333;" />
+            </div>
           </div>
-          
+
           <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
             <button type="button" id="cancel-btn" class="btn btn-cancel" style="display: none;">
               <i class="fas fa-times"></i> Cancel
@@ -554,25 +646,25 @@
           </div>
         </form>
       </div>
-      
+
       <!-- Items List -->
       <div class="admin-card">
         <h2 class="admin-card-title">
           <i class="fas fa-list"></i>
           Menu Items <span id="items-count" class="category-tag">0</span>
         </h2>
-        
+
         <div id="loading" class="loading">
           <i class="fas fa-spinner"></i>
           <p>Loading menu items...</p>
         </div>
-        
+
         <div id="empty-state" class="empty-state" style="display: none;">
           <i class="fas fa-coffee"></i>
           <p>No menu items yet.</p>
           <p>Add your first item using the form!</p>
         </div>
-        
+
         <div id="items-list" class="items-list">
           <!-- Items will be loaded here -->
         </div>
@@ -590,7 +682,8 @@
         </button>
       </div>
       <p style="color: #888; margin-bottom: 1.5rem;">
-        Are you sure you want to delete <strong id="delete-item-name" style="color: #fff;"></strong>? This action cannot be undone.
+        Are you sure you want to delete <strong id="delete-item-name" style="color: #fff;"></strong>? This action cannot
+        be undone.
       </p>
       <div style="display: flex; gap: 1rem;">
         <button class="btn btn-cancel" onclick="closeDeleteModal()">Cancel</button>
@@ -606,10 +699,10 @@
 
   <!-- Supabase CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  
+
   <!-- Supabase Config -->
   <script src="js/supabase-config.js"></script>
-  
+
   <!-- Admin Script -->
   <script>
     // ============================================
@@ -744,25 +837,46 @@
       
       itemsListEl.innerHTML = menuItems.map(item => `
         <div class="item-card">
-          <div class="item-emoji">${item.emoji || '🍹'}</div>
+          <div class="item-visual" style="width: 60px; height: 60px; min-width: 60px; border-radius: 8px; overflow: hidden; background: #222; position: relative;">
+            ${item.image ? 
+              `<img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/60x60?text=🍽️'">` : 
+              `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">${item.emoji || '🍽️'}</div>`
+            }
+          </div>
           <div class="item-info">
             <div class="item-name">${item.name}</div>
             <div class="item-details">
               <span class="item-price">₹${item.price}</span>
               <span class="item-category">${item.category}</span>
-              ${item.description ? `<span style="color: #666;">${item.description.substring(0, 50)}${item.description.length > 50 ? '...' : ''}</span>` : ''}
             </div>
           </div>
           <div class="item-actions">
-            <button class="btn btn-edit" onclick="editItem('${item.id}')">
-              <i class="fas fa-edit"></i> Edit
+            <button class="btn btn-edit" onclick="editItem('${item.id}')" title="Edit">
+              <i class="fas fa-edit"></i>
             </button>
-            <button class="btn btn-delete" onclick="confirmDelete('${item.id}')">
+            <button class="btn btn-delete" onclick="confirmDelete('${item.id}')" title="Delete">
               <i class="fas fa-trash"></i>
             </button>
           </div>
         </div>
       `).join('');
+    }
+
+    // Update image preview
+    function updateImagePreview() {
+      const url = document.getElementById('item-image').value.trim();
+      const container = document.getElementById('image-preview-container');
+      const img = document.getElementById('image-preview');
+      
+      if (url) {
+        img.src = url;
+        container.style.display = 'block';
+        img.onerror = () => {
+          container.style.display = 'none';
+        };
+      } else {
+        container.style.display = 'none';
+      }
     }
 
     // Handle form submit
@@ -833,6 +947,9 @@ if (editingId) {
       document.getElementById('item-category').value = item.category;
       document.getElementById('item-description').value = item.description || '';
       document.getElementById('item-image').value = item.image || '';
+      
+      // Update preview
+      updateImagePreview();
       
       // Update UI
       document.getElementById('form-title').textContent = 'Edit Menu Item';
@@ -911,5 +1028,5 @@ if (editingId) {
     });
   </script>
 </body>
-</html>
 
+</html>

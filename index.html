@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- ============================================
        MJC - Mariam Juice Cafe | Hailakandi, Assam
@@ -10,8 +11,10 @@
 
   <!-- SEO Meta Tags -->
   <title>Mariam Juice Cafe (MJC) | Best Fresh Juices in Hailakandi, Assam</title>
-  <meta name="description" content="Mariam Juice Cafe (MJC) — Hailakandi's premium juice café. Freshly squeezed juices, smoothies, and healthy beverages crafted with love. Best in Town." />
-  <meta name="keywords" content="Mariam Juice Cafe, MJC, juice cafe Hailakandi, fresh juice Assam, smoothies Hailakandi, best cafe Hailakandi, healthy drinks Assam" />
+  <meta name="description"
+    content="Mariam Juice Cafe (MJC) — Hailakandi's premium juice café. Freshly squeezed juices, smoothies, and healthy beverages crafted with love. Best in Town." />
+  <meta name="keywords"
+    content="Mariam Juice Cafe, MJC, juice cafe Hailakandi, fresh juice Assam, smoothies Hailakandi, best cafe Hailakandi, healthy drinks Assam" />
   <meta name="author" content="Mariam Juice Cafe" />
   <meta name="robots" content="index, follow" />
 
@@ -25,7 +28,8 @@
   <link rel="canonical" href="https://mariamjuicecafe.com/" />
 
   <!-- Favicon placeholder -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍹</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍹</text></svg>" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -43,18 +47,22 @@
     <div class="nav-container">
 
       <!-- Logo -->
-      <a href="#hero" class="nav-logo" aria-label="Mariam Juice Cafe Home">
-        <span class="logo-main">MJC</span>
-        <span class="logo-sub">Mariam Juice Cafe</span>
+      <a href="index.html" class="nav-logo" aria-label="Mariam Juice Cafe Home">
+        <img src="assets/logo-mjc.png" alt="MJC Logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="logo-text" style="display:none">
+          <span class="logo-main">MJC</span>
+          <span class="logo-sub">Mariam Juice Cafe</span>
+        </div>
       </a>
 
       <!-- Desktop Links -->
       <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
+        <li><a href="#categories">Categories</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="order.html" class="nav-cta">Order Now</a></li>
+        <li><a href="order.html" class="nav-cta">Order Online</a></li>
       </ul>
 
       <!-- Hamburger Button (mobile) -->
@@ -68,12 +76,11 @@
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" aria-hidden="true">
       <ul>
-        <li><a href="#hero">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
+        <li><a href="#categories">Categories</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#contact" style="color:var(--gold)">Order Now →</a></li>
+        <li><a href="order.html" style="color:var(--gold)">Order Online →</a></li>
       </ul>
     </div>
   </nav>
@@ -89,126 +96,236 @@
       <div class="hero-text">
         <div class="hero-badge reveal">
           <span class="dot"></span>
-          Now Open · Hailakandi, Assam
+          Premium Café Experience · Hailakandi
         </div>
 
         <h1 class="hero-title reveal delay-1">
-          Best in<br><span class="gold-word">Town.</span>
+          The Best<br><span class="gold-word">Café Experience</span><br>in Town.
         </h1>
 
-        <p class="hero-sub reveal delay-2">Freshness in Every Sip</p>
+        <p class="hero-sub reveal delay-2">Crafted with Passion, Served with Love</p>
 
         <p class="hero-desc reveal delay-3">
-          Experience Hailakandi's most premium juice café. We craft every drink
-          with hand-picked fresh fruits, zero preservatives, and a whole lot of love.
+          Experience MJC — Hailakandi's ultimate destination for gourmet pizzas,
+          juicy burgers, handcrafted mocktails, and our signature fresh juices.
+          The perfect blend of taste and aesthetics.
         </p>
 
         <div class="hero-actions reveal delay-4">
           <a href="menu.html" class="btn-primary">
-            <span>Explore Menu</span>
-            <span>→</span>
+            <span>Explore Full Menu</span>
           </a>
-          <a href="order.html" class="btn-ghost">Order Now</a>
+          <a href="order.html" class="btn-ghost">Order Online</a>
         </div>
 
         <div class="hero-stats reveal delay-5">
           <div class="stat-item">
-            <div class="stat-num"><span data-count="50" data-suffix="+">50+</span></div>
-            <div class="stat-label">Menu Items</div>
+            <div class="stat-num"><span data-count="120" data-suffix="+">120+</span></div>
+            <div class="stat-label">Delights</div>
           </div>
           <div class="stat-item">
-            <div class="stat-num"><span data-count="5000" data-suffix="+">5000+</span></div>
-            <div class="stat-label">Happy Customers</div>
+            <div class="stat-num"><span data-count="10" data-suffix="k">10k+</span></div>
+            <div class="stat-label">Happy Guests</div>
           </div>
           <div class="stat-item">
             <div class="stat-num"><span data-count="100" data-suffix="%">100%</span></div>
-            <div class="stat-label">Fresh Ingredients</div>
+            <div class="stat-label">Pure Quality</div>
           </div>
         </div>
       </div>
 
-      <!-- Right: Animated Glass Visual -->
+      <!-- Right: Premium Visual -->
       <div class="hero-visual reveal-right">
-        <div class="glass-wrapper">
-          <!-- Dashed spinning ring -->
-          <div class="hero-ring"></div>
-
-          <!-- Floating fruit chips -->
-          <div class="fruit-chip">🍊</div>
-          <div class="fruit-chip">🍋</div>
-          <div class="fruit-chip">🍇</div>
-          <div class="fruit-chip">🥭</div>
-
-          <!-- Main juice glass SVG illustration -->
-          <svg class="juice-glass-svg" width="220" height="320" viewBox="0 0 220 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Glass body -->
-            <path d="M45 30 L175 30 L155 290 L65 290 Z" fill="white" stroke="#F5A623" stroke-width="2.5" stroke-linejoin="round"/>
-            <!-- Juice fill (golden) -->
-            <path d="M66 180 L154 180 L145 290 L75 290 Z" fill="#F5A623" opacity="0.85"/>
-            <!-- Juice layer (lighter) -->
-            <path d="M60 130 L160 130 L155 185 L65 185 Z" fill="#f8c05a" opacity="0.6"/>
-            <!-- Ice cubes -->
-            <rect x="78" y="140" width="22" height="20" rx="4" fill="white" opacity="0.7"/>
-            <rect x="106" y="148" width="18" height="18" rx="4" fill="white" opacity="0.6"/>
-            <rect x="130" y="138" width="20" height="22" rx="4" fill="white" opacity="0.65"/>
-            <!-- Straw -->
-            <rect x="126" y="15" width="8" height="200" rx="4" fill="#E63946" opacity="0.85"/>
-            <!-- Straw highlight -->
-            <rect x="128" y="15" width="2" height="200" rx="2" fill="white" opacity="0.4"/>
-            <!-- Rim highlight -->
-            <path d="M45 30 L175 30" stroke="white" stroke-width="1.5" opacity="0.5"/>
-            <!-- Glass shine -->
-            <path d="M60 50 L75 260" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.12"/>
-            <!-- Orange slice garnish -->
-            <circle cx="148" cy="38" r="20" fill="#F5A623" opacity="0.9"/>
-            <circle cx="148" cy="38" r="12" fill="#f8c05a" opacity="0.8"/>
-            <line x1="148" y1="18" x2="148" y2="58" stroke="white" stroke-width="1.2" opacity="0.6"/>
-            <line x1="128" y1="38" x2="168" y2="38" stroke="white" stroke-width="1.2" opacity="0.6"/>
-            <line x1="134" y1="24" x2="162" y2="52" stroke="white" stroke-width="1.2" opacity="0.6"/>
-            <line x1="162" y1="24" x2="134" y2="52" stroke="white" stroke-width="1.2" opacity="0.6"/>
-            <!-- Rim detail -->
-            <path d="M45 30 Q45 18 55 18 L165 18 Q175 18 175 30" fill="#f0f0f0" stroke="#F5A623" stroke-width="2"/>
-          </svg>
-
-          <!-- Best Seller badge -->
-          <div class="glass-badge">✦ Best Seller</div>
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800"
+            alt="Premium Cafe Atmosphere"
+            onerror="this.src='https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=800'">
+          <div class="hero-img-overlay"></div>
+          <div class="glass-badge">✦ Chef's Choice</div>
         </div>
       </div>
 
     </div>
   </section>
 
-
-  <!-- MENU SECTION - Commented out. Items visible only on order.html and order.html -->
-  
-  <section id="menu">
+  <!-- ============================================================
+       CATEGORY SECTION
+  ============================================================ -->
+  <section id="categories" style="padding: 7rem 1.5rem; background: var(--white);">
     <div class="menu-container">
-      <div class="menu-header">
-        <div>
-          <span class="section-label reveal">Our Menu</span>
-          <h2 class="section-title section-title-white reveal delay-1">
-            Crafted for <span class="gold-text">Every Taste</span>
-          </h2>
-          <p class="section-desc section-desc-white reveal delay-2">
-            Every drink is made fresh to order. No preservatives, no compromises.
-          </p>
-        </div>
-        <div class="menu-tabs reveal delay-3">
-          <button class="menu-tab active" data-cat="all">All</button>
-          <button class="menu-tab" data-cat="Fresh Juice">Juices</button>
-          <button class="menu-tab" data-cat="Smoothie">Smoothies</button>
-          <button class="menu-tab" data-cat="Shake">Shakes</button>
-          <button class="menu-tab" data-cat="Special">Specials</button>
-        </div>
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="section-label reveal">Explore by Category</span>
+        <h2 class="section-title reveal delay-1">Something for <span class="gold-text">Every Caving</span></h2>
       </div>
-      <div class="menu-grid" id="menu-grid">
-        <div class="loading-menu">
-          <p>Loading menu...</p>
-        </div>
+
+      <style>
+        .category-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .cat-card {
+          position: relative;
+          height: 320px;
+          border-radius: 4px;
+          overflow: hidden;
+          cursor: pointer;
+          border: 1px solid var(--gray-100);
+        }
+
+        .cat-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s var(--ease-out);
+        }
+
+        .cat-card:hover img {
+          transform: scale(1.1);
+        }
+
+        .cat-card-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to top, rgba(45, 36, 30, 0.9), transparent 60%);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 2rem;
+          color: var(--white);
+        }
+
+        .cat-card-title {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.8rem;
+          font-weight: 700;
+          margin-bottom: 0.25rem;
+        }
+
+        .cat-card-desc {
+          font-size: 0.75rem;
+          color: rgba(255, 255, 255, 0.7);
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        }
+
+        .cat-card-btn {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: var(--gold);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: translateX(60px);
+          opacity: 0;
+          transition: all 0.4s var(--ease-out);
+        }
+
+        .cat-card:hover .cat-card-btn {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      </style>
+
+      <div class="category-grid">
+        <a href="menu.html?cat=Pizza" class="cat-card reveal">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600"
+            alt="Pizza">
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Gourmet Pizza</h3>
+            <p class="cat-card-desc">Wood-fired Perfection</p>
+          </div>
+          <div class="cat-card-btn">→</div>
+        </a>
+        <a href="menu.html?cat=Burger" class="cat-card reveal delay-1">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
+            alt="Burger">
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Craft Burgers</h3>
+            <p class="cat-card-desc">Juicy & Loaded</p>
+          </div>
+          <div class="cat-card-btn">→</div>
+        </a>
+        <a href="menu.html?cat=Sandwich" class="cat-card reveal delay-2">
+          <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=600"
+            alt="Sandwich">
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Sandwiches</h3>
+            <p class="cat-card-desc">Toasted & Fresh</p>
+          </div>
+          <div class="cat-card-btn">→</div>
+        </a>
+        <a href="menu.html?cat=Mocktail" class="cat-card reveal delay-3">
+          <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=600"
+            alt="Mocktails">
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Mocktails</h3>
+            <p class="cat-card-desc">Handcrafted Refreshment</p>
+          </div>
+          <div class="cat-card-btn">→</div>
+        </a>
+        <a href="menu.html?cat=Shake" class="cat-card reveal">
+          <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=600"
+            alt="Shakes">
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Thick Shakes</h3>
+            <p class="cat-card-desc">Creamy Indulgence</p>
+          </div>
+          <div class="cat-card-btn">→</div>
+        </a>
+        <a href="menu.html?cat=Fresh Juice" class="cat-card reveal delay-1">
+          <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?auto=format&fit=crop&q=80&w=600"
+            alt="Juices">
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Fresh Juices</h3>
+            <p class="cat-card-desc">100% Pure & Cold-Pressed</p>
+          </div>
+          <div class="cat-card-btn">→</div>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="menu.html" class="btn-primary reveal">
+          <span>View All Categories</span>
+        </a>
       </div>
     </div>
   </section>
-  
+
+  <!-- FEATURED MENU SECTION -->
+  <section id="menu" style="padding: 4rem 1.5rem 8rem; background: var(--gray-50);">
+    <div class="menu-container">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="section-label reveal">Handpicked for You</span>
+        <h2 class="section-title reveal delay-1">
+          Featured <span class="gold-text">Delights</span>
+        </h2>
+        <p class="section-desc reveal delay-2" style="max-width: 600px; margin: 0 auto;">
+          Experience a taste of MJC with our chef's top recommendations.
+        </p>
+      </div>
+
+      <!-- Grid for featured items -->
+      <div class="menu-grid" id="featured-menu-grid">
+        <div class="loading-menu" style="text-align: center; padding: 3rem; color: #888; grid-column: 1/-1;">
+          <p>Loading favorites...</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 5rem;">
+        <a href="menu.html" class="btn-primary reveal delay-3" style="display: inline-flex; align-items: center; gap: 0.75rem;">
+          <span>Explore Whole Menu</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
 
 
 
@@ -221,29 +338,10 @@
       <!-- Visual Side -->
       <div class="about-visual reveal-left">
         <div class="about-deco"></div>
-        <div class="about-img-main">
-          <div class="about-img-inner">
-            <!-- Decorative cafe interior feel using SVG -->
-            <svg width="220" height="260" viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="20" y="180" width="180" height="60" rx="8" fill="#e8e8e8"/>
-              <rect x="50" y="140" width="120" height="45" rx="6" fill="#d0d0d0"/>
-              <!-- Juice bottles on counter -->
-              <rect x="65" y="100" width="18" height="45" rx="9" fill="#F5A623" opacity="0.8"/>
-              <rect x="95" y="90" width="18" height="55" rx="9" fill="#f8c05a" opacity="0.7"/>
-              <rect x="125" y="105" width="18" height="40" rx="9" fill="#F5A623" opacity="0.9"/>
-              <!-- Glasses -->
-              <rect x="70" y="155" width="10" height="20" rx="2" fill="white" opacity="0.8"/>
-              <rect x="100" y="155" width="10" height="20" rx="2" fill="white" opacity="0.8"/>
-              <rect x="130" y="155" width="10" height="20" rx="2" fill="white" opacity="0.8"/>
-              <!-- Overhead lamp -->
-              <ellipse cx="110" cy="40" rx="40" ry="15" fill="#F5A623" opacity="0.6"/>
-              <line x1="110" y1="10" x2="110" y2="40" stroke="#999" stroke-width="2"/>
-              <!-- Light glow -->
-              <ellipse cx="110" cy="55" rx="55" ry="20" fill="#F5A623" opacity="0.08"/>
-              <!-- MJC text on wall -->
-              <text x="88" y="75" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#F5A623" opacity="0.5">MJC</text>
-            </svg>
-          </div>
+        <div class="about-img-main" style="border-radius: 20px; overflow: hidden; height: 320px;">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" 
+               alt="Cafe Atmosphere" 
+               style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <!-- Floating experience card -->
         <div class="about-float-card">
@@ -323,33 +421,41 @@
 
       <div class="gallery-grid">
         <div class="gallery-item tall reveal delay-1">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#2a2a2a)"><img src="freshorangepress.png" alt="an image of fress orange press"></div>
-          <div class="gallery-overlay"><span class="gallery-caption">Fresh Orange Press</span></div>
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800" alt="Fresh ingredients being prepared">
+          </div>
+          <div class="gallery-overlay"><span class="gallery-caption">Freshness First</span></div>
         </div>
         <div class="gallery-item reveal delay-2">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1e1e1e,#111)"><img src="mangobliss.png" alt="an image of fress mango bliss"></div>
-          <div class="gallery-overlay"><span class="gallery-caption">Mango Bliss</span></div>
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=600" alt="Premium Loaded Burger">
+          </div>
+          <div class="gallery-overlay"><span class="gallery-caption">Burger Craft</span></div>
         </div>
         <div class="gallery-item wide reveal delay-3">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#222,#181818);font-size:5rem"><img src="counter.png" alt="an image of counter"></div>
-          <div class="gallery-overlay"><span class="gallery-caption">MJC Counter Vibes</span></div>
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&q=80&w=1200" alt="Cafe Counter Vibe">
+          </div>
+          <div class="gallery-overlay"><span class="gallery-caption">Vibrant Vibe</span></div>
         </div>
         <div class="gallery-item reveal delay-2">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#222)"><img src="drink_1.png" alt="an image of drink1"></div>
-          <div class="gallery-overlay"><span class="gallery-caption">Berry Blush</span></div>
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=600" alt="Barista crafting drink">
+          </div>
+          <div class="gallery-overlay"><span class="gallery-caption">Artisanal Sips</span></div>
         </div>
         <div class="gallery-item reveal delay-3">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#202020,#151515)"><img src="drink_2.png" alt="an image of drink2"></div>
-          <div class="gallery-overlay"><span class="gallery-caption">Tropical Pineapple</span></div>
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600" alt="Handcrafted Pizza">
+          </div>
+          <div class="gallery-overlay"><span class="gallery-caption">Woodfired Love</span></div>
         </div>
         <div class="gallery-item reveal delay-4">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1c1c1c,#262626)"><img src="drink_3.png" alt="an image of drink3"></div>
-          <div class="gallery-overlay"><span class="gallery-caption">Detox Blend</span></div>
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&q=80&w=600" alt="Fresh Fruit Juice">
+          </div>
+          <div class="gallery-overlay"><span class="gallery-caption">Pure Fruit Juice</span></div>
         </div>
-       <!-- <div class="gallery-item reveal delay-5">
-          <div class="gallery-img" style="background:linear-gradient(135deg,#1a1a1a,#202020)"><img src="drink_4.png" alt="an image of drink4"></div>
-          <div class="gallery-overlay"><span class="gallery-caption">Grape Power</span></div>
-        </div> -->
       </div>
 
     </div>
@@ -392,7 +498,8 @@
             <div class="contact-info-icon">📱</div>
             <div class="contact-info-text">
               <h4>Call or WhatsApp</h4>
-              <p><a href="https://wa.me/919136728687" target="_blank" style="color: inherit; text-decoration: none;">+91 91367 28687</a></p>
+              <p><a href="https://wa.me/919136728687" target="_blank" style="color: inherit; text-decoration: none;">+91
+                  91367 28687</a></p>
             </div>
           </div>
           <div class="contact-info-item">
@@ -408,7 +515,8 @@
       <!-- Right: Form -->
       <div class="reveal-right">
         <div class="contact-form-wrap">
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--black);margin-bottom:0.4rem;">
+          <h3
+            style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--black);margin-bottom:0.4rem;">
             Send a Message
           </h3>
           <p style="font-size:0.82rem;color:#888;margin-bottom:2rem;">
@@ -419,12 +527,14 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="f-name">Full Name *</label>
-                <input type="text" id="f-name" name="name" placeholder="Your name" data-err="name-error" autocomplete="name" />
+                <input type="text" id="f-name" name="name" placeholder="Your name" data-err="name-error"
+                  autocomplete="name" />
                 <span class="form-error-msg" id="name-error"></span>
               </div>
               <div class="form-group">
                 <label for="f-email">Email Address *</label>
-                <input type="email" id="f-email" name="email" placeholder="you@example.com" data-err="email-error" autocomplete="email" />
+                <input type="email" id="f-email" name="email" placeholder="you@example.com" data-err="email-error"
+                  autocomplete="email" />
                 <span class="form-error-msg" id="email-error"></span>
               </div>
             </div>
@@ -432,7 +542,8 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="f-phone">Phone (Optional)</label>
-                <input type="tel" id="f-phone" name="phone" placeholder="+91 XXXXX XXXXX" data-err="phone-error" autocomplete="tel" />
+                <input type="tel" id="f-phone" name="phone" placeholder="+91 XXXXX XXXXX" data-err="phone-error"
+                  autocomplete="tel" />
                 <span class="form-error-msg" id="phone-error"></span>
               </div>
               <div class="form-group">
@@ -449,7 +560,8 @@
 
             <div class="form-group">
               <label for="f-message">Your Message *</label>
-              <textarea id="f-message" name="message" placeholder="Tell us how we can help you..." data-err="msg-error"></textarea>
+              <textarea id="f-message" name="message" placeholder="Tell us how we can help you..."
+                data-err="msg-error"></textarea>
               <span class="form-error-msg" id="msg-error"></span>
             </div>
 
@@ -488,22 +600,27 @@
           <div class="footer-social">
             <a href="#" class="social-icon" aria-label="Instagram" title="Follow us on Instagram">
               <!-- Instagram SVG icon -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
               </svg>
             </a>
-            <a href="https://wa.me/919136728687" target="_blank" class="social-icon" aria-label="WhatsApp" title="Chat on WhatsApp">
+            <a href="https://wa.me/919136728687" target="_blank" class="social-icon" aria-label="WhatsApp"
+              title="Chat on WhatsApp">
               <!-- WhatsApp SVG icon -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
               </svg>
             </a>
             <a href="#" class="social-icon" aria-label="Facebook" title="Find us on Facebook">
               <!-- Facebook SVG icon -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
               </svg>
             </a>
           </div>
@@ -557,83 +674,74 @@
 
   <!-- Main JavaScript -->
   <script src="js/main.js"></script>
-  
-  
+
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabase-config.js"></script>
-  
+
   <script>
-    // Load menu items from Supabase on page load
+    // Load 3 featured items from Supabase on homepage load
     document.addEventListener('DOMContentLoaded', async () => {
-      console.log('🏠 Index page - Loading menu from Supabase...');
-      
-      const menuGrid = document.getElementById('menu-grid');
-      
+      console.log('🏠 Homepage - Loading featured menu items...');
+
+      const menuGrid = document.getElementById('featured-menu-grid');
+
       try {
-        const menuItems = await MenuItems.getAll();
-        console.log('📋 Menu items loaded:', menuItems.length);
+        if (typeof MenuItems === 'undefined') throw new Error('Supabase not loaded');
         
-        if (menuItems.length === 0) {
+        const items = await MenuItems.getAll();
+        console.log('📋 Total items fetched:', items.length);
+
+        if (items.length === 0) {
           menuGrid.innerHTML = `
-            <div class="empty-menu" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #888;">
-              <p>No menu items available. Please add items from the admin panel.</p>
-              <a href="admin.html" style="color: #F5A623; text-decoration: underline;">Go to Admin Panel</a>
+            <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #888;">
+              <p>No featured items available right now.</p>
             </div>
           `;
           return;
         }
-        
-        // Render menu cards
-        menuGrid.innerHTML = menuItems.map((item, index) => `
-          <div class="menu-card reveal delay-${(index % 4) + 1}" data-cat="${item.category}">
-            <div class="menu-card-img">
-              <div class="menu-card-img-inner">${item.emoji || '🍹'}</div>
+
+        // Take only 3 items (Featured/Popular ones usually)
+        const featuredItems = items.slice(0, 3);
+
+        // Render premium cards using the same structure as menu page
+        menuGrid.innerHTML = featuredItems.map((item, index) => `
+          <div class="menu-item-card reveal delay-${index + 1}">
+            <div class="item-image-wrapper">
+              <span class="item-category-tag">${item.category}</span>
+              ${item.image ? 
+                `<img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://placehold.co/800x600?text=${encodeURIComponent(item.name)}'">` : 
+                `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; background: #f9f9f9;">${item.emoji || '🍽️'}</div>`
+              }
             </div>
-            <div class="menu-card-body">
-              <h3 class="menu-card-name">${item.name}</h3>
-              <p class="menu-card-desc">${item.description || 'Delicious fresh drink'}</p>
-              <div class="menu-card-footer">
-                <div class="menu-card-price">₹${item.price} <span>/ glass</span></div>
-                <button class="menu-add-btn" aria-label="Add to order"><a href="order.html" target="_blank" rel="noopener noreferrer">+</a></button>
+            <div class="item-content">
+              <div class="item-header">
+                <h3 class="item-title">${item.name}</h3>
+                <span class="item-emoji-icon">${item.emoji || '✨'}</span>
+              </div>
+              <p class="item-description">${item.description || "One of our most loved signatures, crafted with freshness."}</p>
+              <div class="item-footer">
+                <span class="item-price-tag">₹${item.price}</span>
+                <a href="order.html?item=${encodeURIComponent(item.name)}&price=${item.price}" class="item-order-btn">
+                  Order Now <span>→</span>
+                </a>
               </div>
             </div>
           </div>
         `).join('');
-        
-        // Re-initialize tab functionality
-        initMenuTabs();
-        
+
+        // Trigger reveal for newly added elements
+        if (window.reveal) window.reveal();
+
       } catch (err) {
-        console.error('❌ Error loading menu:', err);
-        menuGrid.innerHTML = `
-          <div class="error-menu" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #E63946;">
-            <p>Error loading menu. Please try again later.</p>
-          </div>
-        `;
+        console.error('❌ Error loading featured menu:', err);
+        menuGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #E63946;"><p>Error loading featured items.</p></div>`;
       }
     });
-    
-    // Menu tab functionality
-    function initMenuTabs() {
-      const tabs = document.querySelectorAll('.menu-tab');
-      const cards = document.querySelectorAll('.menu-card');
-      
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          
-          const cat = tab.dataset.cat;
-          cards.forEach(card => {
-            const show = cat === 'all' || card.dataset.cat === cat;
-            card.style.display = show ? 'block' : 'none';
-          });
-        });
-      });
-    }
   </script>
-  
+
 
 
 </body>
+
 </html>

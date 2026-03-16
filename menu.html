@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Full Menu | Mariam Juice Cafe (MJC) — Hailakandi, Assam</title>
-  <meta name="description" content="Browse the complete MJC menu — fresh juices, smoothies, cold press, tropical specials and more. Order directly on WhatsApp." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F5A623'/><text y='.9em' font-size='65' x='50%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700'>M</text></svg>" />
+  <meta name="description"
+    content="Browse the complete MJC menu — fresh juices, smoothies, cold press, tropical specials and more. Order directly on WhatsApp." />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F5A623'/><text y='.9em' font-size='65' x='50%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700'>M</text></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
@@ -17,15 +20,19 @@
       position: relative;
       overflow: hidden;
     }
+
     .page-hero::before {
       content: '';
       position: absolute;
-      top: -100px; left: 50%;
+      top: -100px;
+      left: 50%;
       transform: translateX(-50%);
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(245,166,35,0.12) 0%, transparent 65%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.12) 0%, transparent 65%);
       pointer-events: none;
     }
+
     .page-hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -34,29 +41,45 @@
       margin-bottom: 0.75rem;
       position: relative;
     }
+
     .page-hero p {
       font-size: 1rem;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255, 255, 255, 0.55);
       max-width: 480px;
       margin: 0 auto;
       position: relative;
     }
+
     .page-hero .breadcrumb {
       font-size: 0.72rem;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.35);
       letter-spacing: 0.15em;
       text-transform: uppercase;
       margin-bottom: 1rem;
       position: relative;
     }
-    .page-hero .breadcrumb a { color: var(--gold); text-decoration: none; }
+
+    .page-hero .breadcrumb a {
+      color: var(--gold);
+      text-decoration: none;
+    }
 
     /* Full menu layout */
-    .full-menu-section { background: #fff; padding: 5rem 1.5rem 6rem; }
-    .full-menu-container { max-width: 1200px; margin: 0 auto; }
+    .full-menu-section {
+      background: #fff;
+      padding: 5rem 1.5rem 6rem;
+    }
+
+    .full-menu-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
     /* Category section */
-    .cat-section { margin-bottom: 4rem; }
+    .cat-section {
+      margin-bottom: 4rem;
+    }
+
     .cat-header {
       display: flex;
       align-items: center;
@@ -65,13 +88,18 @@
       padding-bottom: 1rem;
       border-bottom: 2px solid #f0f0f0;
     }
-    .cat-icon { font-size: 2rem; }
+
+    .cat-icon {
+      font-size: 2rem;
+    }
+
     .cat-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.6rem;
       font-weight: 700;
       color: #000;
     }
+
     .cat-count {
       font-size: 0.72rem;
       color: #888;
@@ -82,7 +110,12 @@
     }
 
     /* Menu list table style */
-    .menu-list { display: flex; flex-direction: column; gap: 0; }
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
     .menu-list-item {
       display: flex;
       align-items: center;
@@ -94,21 +127,90 @@
       border: 1.5px solid #f0f0f0;
       transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
     }
+
     .menu-list-item:hover {
       border-color: #F5A623;
-      box-shadow: 0 8px 30px rgba(245,166,35,0.1);
+      box-shadow: 0 8px 30px rgba(245, 166, 35, 0.1);
       transform: translateX(4px);
     }
-    .item-emoji { font-size: 2.2rem; min-width: 44px; text-align: center; }
-    .item-info { flex: 1; }
-    .item-name { font-size: 0.95rem; font-weight: 700; color: #000; margin-bottom: 3px; }
-    .item-desc { font-size: 0.78rem; color: #888; line-height: 1.5; }
-    .item-badges { display: flex; gap: 0.4rem; margin-top: 5px; flex-wrap: wrap; }
-    .badge-pop { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(245,166,35,0.12); color: #d4891a; padding: 0.2rem 0.6rem; border-radius: 50px; }
-    .badge-new { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(230,57,70,0.1); color: #E63946; padding: 0.2rem 0.6rem; border-radius: 50px; }
-    .badge-veg { font-size: 0.6rem; font-weight: 700; background: rgba(34,197,94,0.1); color: #16a34a; padding: 0.2rem 0.6rem; border-radius: 50px; }
-    .item-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem; min-width: 120px; }
-    .item-price { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: #F5A623; white-space: nowrap; }
+
+    .item-emoji {
+      font-size: 2.2rem;
+      min-width: 44px;
+      text-align: center;
+    }
+
+    .item-info {
+      flex: 1;
+    }
+
+    .item-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 3px;
+    }
+
+    .item-desc {
+      font-size: 0.78rem;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    .item-badges {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 5px;
+      flex-wrap: wrap;
+    }
+
+    .badge-pop {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(245, 166, 35, 0.12);
+      color: #d4891a;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+    }
+
+    .badge-new {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(230, 57, 70, 0.1);
+      color: #E63946;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+    }
+
+    .badge-veg {
+      font-size: 0.6rem;
+      font-weight: 700;
+      background: rgba(34, 197, 94, 0.1);
+      color: #16a34a;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+    }
+
+    .item-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.6rem;
+      min-width: 120px;
+    }
+
+    .item-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #F5A623;
+      white-space: nowrap;
+    }
+
     .item-wa-btn {
       display: inline-flex;
       align-items: center;
@@ -125,19 +227,24 @@
       white-space: nowrap;
       transition: background 0.3s, transform 0.2s;
     }
-    .item-wa-btn:hover { background: #1ebe5d; transform: scale(1.04); }
+
+    .item-wa-btn:hover {
+      background: #1ebe5d;
+      transform: scale(1.04);
+    }
 
     /* Sticky filter bar */
     .filter-bar {
       position: sticky;
       top: 72px;
       z-index: 100;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #f0f0f0;
       padding: 0.8rem 1.5rem;
       margin-bottom: 3rem;
     }
+
     .filter-inner {
       max-width: 1200px;
       margin: 0 auto;
@@ -147,8 +254,21 @@
       overflow-x: auto;
       scrollbar-width: none;
     }
-    .filter-inner::-webkit-scrollbar { display: none; }
-    .filter-label { font-size: 0.72rem; font-weight: 600; color: #888; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; margin-right: 0.5rem; }
+
+    .filter-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filter-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #888;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      margin-right: 0.5rem;
+    }
+
     .filter-btn {
       padding: 0.45rem 1.1rem;
       border-radius: 50px;
@@ -164,7 +284,13 @@
       white-space: nowrap;
       font-family: 'Poppins', sans-serif;
     }
-    .filter-btn:hover, .filter-btn.active { background: #000; border-color: #000; color: #F5A623; }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #000;
+      border-color: #000;
+      color: #F5A623;
+    }
 
     /* CTA Banner */
     .menu-cta-banner {
@@ -178,9 +304,23 @@
       margin-top: 4rem;
       flex-wrap: wrap;
     }
-    .menu-cta-banner h3 { font-family: 'Playfair Display',serif; font-size: 1.8rem; color: #fff; }
-    .menu-cta-banner h3 span { color: #F5A623; }
-    .menu-cta-banner p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 0.4rem; }
+
+    .menu-cta-banner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .menu-cta-banner h3 span {
+      color: #F5A623;
+    }
+
+    .menu-cta-banner p {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 0.4rem;
+    }
+
     .wa-big-btn {
       display: inline-flex;
       align-items: center;
@@ -195,291 +335,284 @@
       padding: 1rem 2rem;
       border-radius: 50px;
       transition: all 0.3s;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35);
       white-space: nowrap;
     }
-    .wa-big-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
 
-    @media(max-width:640px){
-      .menu-list-item { flex-wrap: wrap; }
-      .item-right { flex-direction: row; align-items: center; width: 100%; justify-content: space-between; min-width: unset; }
-      .menu-cta-banner { flex-direction: column; text-align: center; }
+    .wa-big-btn:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+    }
+
+    @media(max-width:640px) {
+      .menu-list-item {
+        flex-wrap: wrap;
+      }
+
+      .item-right {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        min-width: unset;
+      }
+
+      .menu-cta-banner {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav id="navbar" role="navigation">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">
-      <span class="logo-main">MJC</span>
-      <span class="logo-sub">Mariam Juice Cafe</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html" style="color:#F5A623">Menu</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#gallery">Gallery</a></li>
-      <li><a href="order.html" class="nav-cta">Order Now</a></li>
-    </ul>
-    <button id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div id="mobile-menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#gallery">Gallery</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="order.html" style="color:var(--gold)">Order Now →</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Menu</p>
-  <h1>Our <span style="color:#F5A623">Full Menu</span></h1>
-  <p>Every sip crafted fresh — no preservatives, no shortcuts, just pure flavour.</p>
-</div>
-
-<!-- STICKY FILTER BAR -->
-<div class="filter-bar">
-  <div class="filter-inner">
-    <span class="filter-label">Filter:</span>
-    <button class="filter-btn active" data-filter="all">All Items</button>
-    <button class="filter-btn" data-filter="Fresh Juice">Fresh Juices</button>
-    <button class="filter-btn" data-filter="Smoothie">Smoothies</button>
-    <button class="filter-btn" data-filter="Cold Press">Cold Press</button>
-    <button class="filter-btn" data-filter="Shake">Shakes</button>
-    <button class="filter-btn" data-filter="Special">Specials</button>
-  </div>
-</div>
-
-<!-- FULL MENU SECTION (Loaded from Supabase) -->
-<section class="full-menu-section">
-  <div class="full-menu-container" id="full-menu-container">
-    <!-- Menu items will be loaded dynamically from Supabase -->
-    <div class="loading-menu" style="text-align: center; padding: 3rem; color: #888;">
-      <p>Loading menu...</p>
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Mariam Juice Cafe Home">
+        <img src="assets/logo-mjc.png" alt="MJC Logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="logo-text" style="display:none">
+          <span class="logo-main">MJC</span>
+          <span class="logo-sub">Mariam Juice Cafe</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" style="color:var(--gold)">Menu</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="order.html" class="nav-cta">Order Now</a></li>
+      </ul>
+      <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</section>
+    <div id="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="order.html" style="color:var(--gold)">Order Now →</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<!-- FOOTER -->
-<footer id="footer">
-  <div class="footer-container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="logo-main">MJC</div>
-        <div class="logo-sub">Mariam Juice Cafe</div>
-        <p>Hailakandi's most premium juice café. Freshness in every sip, every single day.</p>
-        <div class="footer-social">
-          <a href="#" class="social-icon" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" class="social-icon" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+  <!-- PAGE HEADER -->
+  <header style="padding: 12rem 1.5rem 6rem; background: var(--white); text-align: center;">
+    <div class="menu-container">
+      <span class="section-label reveal">The Collection</span>
+      <h1 class="hero-title reveal delay-1" style="font-size: clamp(3rem, 5vw, 4rem); margin-bottom: 1.5rem;">
+        Discover our <span class="gold-text">Flavors</span>
+      </h1>
+      <p class="section-desc reveal delay-2" style="max-width: 600px; margin: 0 auto 3.5rem;">
+        From artisanal pizzas to refreshing mocktails, explore our curated selection
+        of handcrafted delights made with the finest ingredients.
+      </p>
+
+        <div class="menu-tabs reveal delay-3" style="justify-content: center;">
+          <button class="menu-tab active" data-filter="all">All Menu</button>
+          <button class="menu-tab" data-filter="Pizza">Pizza</button>
+          <button class="menu-tab" data-filter="Burger">Burger</button>
+          <button class="menu-tab" data-filter="Sandwich">Sandwich</button>
+          <button class="menu-tab" data-filter="Starter">Starter</button>
+          <button class="menu-tab" data-filter="Fries">Fries</button>
+          <button class="menu-tab" data-filter="Mocktail">Mocktail</button>
+          <button class="menu-tab" data-filter="Shake">Shake</button>
+          <button class="menu-tab" data-filter="Fresh Juice">Juice</button>
         </div>
       </div>
-      <div class="footer-col">
-        <h5>Navigate</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Full Menu</a></li>
-          <li><a href="order.html">Order Now</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Hours</h5>
-        <ul>
-          <li><a href="#">Mon–Sat: 9AM–9PM</a></li>
-          <li><a href="#">Sunday: 10AM–8PM</a></li>
-          <li><a href="#">Hailakandi, Assam</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Order</h5>
-        <ul>
-          <li><a href="order.html">Place an Order</a></li>
-          <li><a href="https://wa.me/919136728687" target="_blank">WhatsApp Us</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 <span class="highlight">Mariam Juice Cafe</span> | Hailakandi, Assam. All Rights Reserved.</p>
-      <p class="footer-tagline">✦ FRESHNESS IN EVERY SIP ✦</p>
-    </div>
-  </div>
-</footer>
+    </header>
 
-<script src="js/main.js"></script>
-
-<!-- Supabase CDN -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<!-- Supabase Config -->
-<script src="js/supabase-config.js"></script>
-
-<script>
-  // ============================================
-  // Menu Page - Load menu items from Supabase
-  // ============================================
-  
-  const categoryIcons = {
-    'Fresh Juice': '🍊',
-    'Smoothie': '🥤',
-    'Cold Press': '🧊',
-    'Shake': '🥤',
-    'Special': '✨'
-  };
-
-  const WA_NUMBER = '919136728687';
-
-  // Load menu items from Supabase
-  document.addEventListener('DOMContentLoaded', async () => {
-    console.log('📋 Loading menu from Supabase...');
-    console.log('MenuItems available:', typeof MenuItems);
-    
-    const container = document.getElementById('full-menu-container');
-    
-    if (typeof MenuItems === 'undefined') {
-      console.error('❌ MenuItems not defined - Supabase config not loaded');
-      container.innerHTML = `
-        <div style="text-align: center; padding: 3rem; color: #E63946;">
-          <p>Error: Supabase not loaded. Please check your internet connection.</p>
-        </div>
-      `;
-      return;
-    }
-    
-    try {
-      const menuItems = await MenuItems.getAll();
-      console.log('✅ Menu items loaded:', menuItems.length);
-      console.log('Menu items data:', JSON.stringify(menuItems, null, 2));
-      
-      // Debug: Show what category the item has
-      menuItems.forEach(item => {
-        console.log('Item:', item.name, 'Category:', item.category);
-      });
-      
-      if (menuItems.length === 0) {
-        container.innerHTML = `
-          <div style="text-align: center; padding: 3rem; color: #888;">
-            <p style="font-size: 1.2rem; margin-bottom: 1rem;">No menu items available.</p>
-            <p>Please add items from the <a href="admin.html" style="color: #F5A623; text-decoration: underline;">admin panel</a>.</p>
+    <!-- ========    <!-- ============================================
+       MENU CONTENT
+   ============================================ -->
+    <main id="menu-content" style="padding: 4rem 1.5rem 8rem;">
+      <div class="max-width-container">
+        <div id="menu-sections-container">
+          <div class="loading-state" style="text-align: center; padding: 5rem;">
+            <div class="spinner"
+              style="width: 40px; height: 40px; border: 3px solid var(--gray-100); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1.5rem;">
+            </div>
+            <p style="font-weight: 500; color: #8C8279; letter-spacing: 0.05em;">Curating your menu...</p>
           </div>
-        `;
-        return;
-      }
-      
-      // Group items by category
-      const categories = ['Fresh Juice', 'Smoothie', 'Cold Press', 'Shake', 'Special'];
-      let html = '';
-      
-      try {
-        categories.forEach(cat => {
-          const items = menuItems.filter(item => item.category === cat);
-          if (items.length === 0) return;
-          
-          const icon = categoryIcons[cat] || '🍹';
-          
-          html += `
-            <div class="cat-section reveal" data-cat-group="${cat}">
-              <div class="cat-header">
-                <span class="cat-icon">${icon}</span>
-                <h2 class="cat-title">${cat === 'Fresh Juice' ? 'Fresh Juices' : cat === 'Cold Press' ? 'Cold Press' : cat === 'Shake' ? 'Shakes' : cat === 'Special' ? 'House Specials' : cat + 's'}</h2>
-                <span class="cat-count">${items.length} item${items.length !== 1 ? 's' : ''}</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="logo-main">MJC</div>
+            <div class="logo-sub">Mariam Juice Cafe</div>
+            <p>Hailakandi's most premium juice café. Freshness in every sip, every single day.</p>
+            <div class="footer-social">
+              <a href="#" class="social-icon" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg></a>
+              <a href="#" class="social-icon" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Navigate</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Full Menu</a></li>
+              <li><a href="order.html">Order Now</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Hours</h5>
+            <ul>
+              <li><a href="#">Mon–Sat: 9AM–9PM</a></li>
+              <li><a href="#">Sunday: 10AM–8PM</a></li>
+              <li><a href="#">Hailakandi, Assam</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Order</h5>
+            <ul>
+              <li><a href="order.html">Place an Order</a></li>
+              <li><a href="https://wa.me/919136728687" target="_blank">WhatsApp Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 <span class="highlight">Mariam Juice Cafe</span> | Hailakandi, Assam. All Rights Reserved.</p>
+          <p class="footer-tagline">✦ FRESHNESS IN EVERY SIP ✦</p>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      .max-width-container { max-width: 1200px; margin: 0 auto; }
+    </style>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+
+    <script>
+      const WA_NUMBER = '919136728687';
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        const container = document.getElementById('menu-sections-container');
+
+        try {
+          if (typeof MenuItems === 'undefined') throw new Error('Supabase not loaded');
+
+          const items = await MenuItems.getAll();
+
+          if (items.length === 0) {
+            container.innerHTML = `
+              <div style="text-align: center; padding: 5rem;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #8C8279;">Our kitchen is getting ready. No items found.</p>
+                <a href="admin.html" class="btn-ghost" style="padding: 1rem 2rem; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 50px;">Add Items (Admin)</a>
               </div>
-              <div class="menu-list">
-          `;
-          
-          items.forEach(item => {
-            const waLink = `https://wa.me/${WA_NUMBER}?text=Hey%20I%20am%20reaching%20from%20your%20website%2C%20I%20wanna%20order%20${encodeURIComponent(item.name)}%20${item.emoji}%20(₹${item.price})%20...`;
-            
+            `;
+            return;
+          }
+
+          const categoriesOrder = [
+            'Pizza', 'Burger', 'Sandwich', 'Starter', 'Fries',
+            'Mocktail', 'Shake', 'Fresh Juice', 'Special'
+          ];
+
+          const grouped = items.reduce((acc, item) => {
+            const cat = item.category || 'Special';
+            if (!acc[cat]) acc[cat] = [];
+            acc[cat].push(item);
+            return acc;
+          }, {});
+
+          let html = '';
+
+          categoriesOrder.forEach(cat => {
+            const catItems = grouped[cat] || [];
+            if (catItems.length === 0) return;
+
             html += `
-              <div class="menu-list-item" data-cat="${item.category}">
-                <span class="item-emoji">${item.emoji || '🍹'}</span>
-                <div class="item-info">
-                  <div class="item-name">${item.name}</div>
-                  <div class="item-desc">${item.description || 'Delicious fresh drink'}</div>
+              <div class="cat-section reveal" data-category="${cat}" style="margin-bottom: 5rem;">
+                <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem;">
+                  <h2 class="cat-title" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700;">${cat}</h2>
+                  <div style="height: 1px; flex-grow: 1; background: var(--gray-100);"></div>
+                  <span style="font-size: 0.8rem; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;">${catItems.length} Selection${catItems.length > 1 ? 's' : ''}</span>
                 </div>
-                <div class="item-right">
-                  <span class="item-price">₹${item.price}</span>
-                  <a class="item-wa-btn" href="${waLink}" target="_blank">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.856L0 24l6.336-1.51A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.668-.52-5.187-1.427l-.371-.22-3.762.897.933-3.67-.24-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-                    Order Now
-                  </a>
+                <div class="menu-grid">
+                  ${catItems.map(item => `
+                    <div class="menu-item-card reveal" data-cat="${item.category}">
+                      <div class="item-image-wrapper">
+                        <span class="item-category-tag">${item.category}</span>
+                        ${item.image ? 
+                          `<img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://placehold.co/800x600?text=${encodeURIComponent(item.name)}'">` : 
+                          `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; background: #f9f9f9;">${item.emoji || '🍽️'}</div>`
+                        }
+                      </div>
+                      <div class="item-content">
+                        <div class="item-header">
+                          <h3 class="item-title">${item.name}</h3>
+                          <span class="item-emoji-icon">${item.emoji || '✨'}</span>
+                        </div>
+                        <p class="item-description">${item.description || "A chef's special delight crafted with fresh, premium ingredients for an unforgettable taste."}</p>
+                        <div class="item-footer">
+                          <span class="item-price-tag">₹${item.price}</span>
+                          <a href="order.html?item=${encodeURIComponent(item.name)}&price=${item.price}" class="item-order-btn">
+                            Order Now <span>→</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  `).join('')}
                 </div>
               </div>
             `;
           });
-          
-          html += '</div></div>';
-        });
-      } catch (err) {
-        console.error('Error generating HTML:', err);
-        html = '<div style="text-align:center;padding:3rem;color:#E63946;">Error generating menu. Check console.</div>';
-      }
-      
-      console.log('Generated HTML length:', html.length);
-      
-      // Add CTA banner before inserting
-      html += `
-        <div class="menu-cta-banner reveal">
-          <div>
-            <h3>Can't decide? <span>Ask us!</span></h3>
-            <p>Chat with us on WhatsApp — we'll help you find your perfect blend.</p>
-          </div>
-          <a href="https://wa.me/${WA_NUMBER}?text=Hey%20I%20am%20reaching%20from%20your%20website%2C%20I%20need%20help%20choosing%20a%20drink%20from%20the%20menu%20..." target="_blank" class="wa-big-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.532 5.856L0 24l6.336-1.51A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.668-.52-5.187-1.427l-.371-.22-3.762.897.933-3.67-.24-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            Chat on WhatsApp
-          </a>
-        </div>
-      `;
-      
-      console.log('HTML preview:', html.substring(0, 500));
-      
-      container.innerHTML = html;
-      console.log('HTML inserted into container');
-      
-      // Initialize filter functionality
-      initFilter();
-      console.log('Filter initialized');
-      
-    } catch (err) {
-      console.error('❌ Error loading menu:', err);
-      container.innerHTML = `
-        <div style="text-align: center; padding: 3rem; color: #E63946;">
-          <p>Error loading menu. Please try again later.</p>
-        </div>
-      `;
-    }
-  });
-  
-  // Filter functionality
-  function initFilter() {
-    try {
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        const filter = btn.dataset.filter;
-        
-        document.querySelectorAll('.menu-list-item').forEach(item => {
-          item.style.display = (filter === 'all' || item.dataset.cat === filter) ? 'flex' : 'none';
-        });
-        
-        document.querySelectorAll('.cat-section').forEach(sec => {
-          const visible = [...sec.querySelectorAll('.menu-list-item')].some(i => i.style.display !== 'none');
-          sec.style.display = visible ? 'block' : 'none';
-        });
+
+          container.innerHTML = html;
+          if (window.reveal) window.reveal();
+          initFilter();
+
+        } catch (err) {
+          console.error('❌ Error loading menu:', err);
+          container.innerHTML = `<div style="text-align: center; padding: 5rem; color: #E63946;"><p>Error loading menu. Please try again later.</p></div>`;
+        }
       });
-    });
-  }
-</script>
+
+      function initFilter() {
+        document.querySelectorAll('.menu-tab').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.menu-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+
+            document.querySelectorAll('.menu-item-card').forEach(item => {
+              const isVisible = (filter === 'all' || item.dataset.cat === filter);
+              item.style.display = isVisible ? 'flex' : 'none';
+            });
+
+            document.querySelectorAll('.cat-section').forEach(sec => {
+              const visibleCount = [...sec.querySelectorAll('.menu-item-card')].filter(i => i.style.display !== 'none').length;
+              sec.style.display = visibleCount > 0 ? 'block' : 'none';
+            });
+
+            if (window.reveal) window.reveal();
+          });
+        });
+      }
+    </script>
 </body>
 </html>
