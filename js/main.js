@@ -45,9 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
-    revealObserver.observe(el);
-  });
+  // Expose reveal function globally for dynamic content
+  window.reveal = function() {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+      if (!el.classList.contains('visible')) {
+        revealObserver.observe(el);
+      }
+    });
+  };
+
+  // Initial reveal
+  window.reveal();
 
   /* ── 4. MENU CATEGORY FILTER ── */
   const tabs = document.querySelectorAll('.menu-tab');
